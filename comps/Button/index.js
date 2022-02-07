@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import {useTheme} from "../../utils/provider"
+import {themes} from "../../utils/variable"
 
 const Container = styled.div`
     display: flex;
@@ -11,10 +13,9 @@ const Container = styled.div`
 `
 
 const Text = styled.p`
-    font-family: -apple-system, BlinkMacSystemFont;
     font-size: 24px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: ${props=>props.color};
 `
 
 const Button =({
@@ -22,8 +23,10 @@ const Button =({
     text= "Hire Me!",
     onButtonClick= ()=>{}
 }) => {
+
+    const {theme} = useTheme()
     return <Container onClick={()=>{onButtonClick()}}>
-        <Text>{text}</Text>
+        <Text color={themes[theme].textButton}>{text}</Text>
     </Container>
 
 }
