@@ -58,8 +58,8 @@ export default function Home() {
       <ContentContainer boxColor={themes[theme].boxColor}>
         <RightContainer>
           <JobTitle color={themes[theme].text}>Frontend Developer</JobTitle>
-          <Title color={themes[theme].text}>Hi, I'm Hannah <br/> MacPherson</Title>
-          <Caption color={themes[theme].text}>I'm a frontend developer and user interface designer</Caption>
+          <Title color={themes[theme].text}>Hi, I&apos;m Hannah <br/> MacPherson</Title>
+          <Caption color={themes[theme].text}>I&apos;m a frontend developer and user interface designer</Caption>
           <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}}></Button>
         </RightContainer>
         <LeftContainer>Han</LeftContainer>
