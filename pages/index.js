@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styled from 'styled-components'
+
+//import components
+import Button from '../comps/Button'
 
 const Container = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const Container = styled.div`
 export default function Home() {
   return (
     <Container>
-      Hi
+      <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}}></Button>
     </Container>
   )
 }
