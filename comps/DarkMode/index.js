@@ -11,6 +11,7 @@ const Button = styled.button`
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 `
 
 const DarkMode = ({

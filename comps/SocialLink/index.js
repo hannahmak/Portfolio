@@ -6,30 +6,25 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13vw;
-    height: 4.5vw;
-    border-radius: 100px;
-    background-color: #C4D2FA;
+    padding: 5px;
     cursor: pointer;
 `
 
-const Text = styled.p`
-    font-size: 1.5vw;
-    font-weight: 700;
-    color: ${props=>props.color};
+const Icon = styled.img`
+    height: 2vw;
 `
 
-const Button =({
+const SocialLink =({
     //props
-    text= "Hire Me!",
-    onButtonClick= ()=>{}
+    onButtonClick=()=>{},
+    icon='/githubIcon.png',
 }) => {
 
     const {theme} = useTheme()
     return <Container onClick={()=>{onButtonClick()}}>
-        <Text color={themes[theme].textButton}>{text}</Text>
+        <Icon src={icon}/>
     </Container>
 
 }
 
-export default Button
+export default SocialLink

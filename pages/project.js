@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 //import components
+import Navigation from '../comps/Navigation'
+import Button from '../comps/Button'
+import DarkMode from '../comps/DarkMode'
 
 
 const Container = styled.div`
@@ -10,7 +13,7 @@ const Container = styled.div`
 export default function Project() {
   return (
     <Container>
-      Projects
+      <Navigation />
     </Container>
   )
 }

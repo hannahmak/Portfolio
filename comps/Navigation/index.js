@@ -10,6 +10,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
 `
 
 const Logo = styled.div`
@@ -21,6 +22,7 @@ const Logo = styled.div`
 
 const LinkContainer = styled.div`
     display: flex;
+    cursor: pointer;
 `
 
 const Link = styled.a`
