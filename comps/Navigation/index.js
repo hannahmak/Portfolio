@@ -16,7 +16,7 @@ const Container = styled.div`
 const Logo = styled.div`
     margin-right: auto;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5vw;
     color: ${props=>props.color};
 `
 
@@ -27,9 +27,9 @@ const LinkContainer = styled.div`
 
 const Link = styled.a`
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1vw;
     color: ${props=>props.color};
-    padding: 37px;
+    padding: 2.47vw;
     a:active { 
         background-color: #ABC1FF;
       }

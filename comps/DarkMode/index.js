@@ -4,14 +4,14 @@ import {themes} from "../../utils/variable"
 
 const Button = styled.button`
     margin-left: auto;
-    height: 30px;
-    width: 30px;
+    background-size: 1.8vw;
+    height: 40px;
+    width: 1.8vw;
     background-image: url(${props=>props.icon});
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    cursor: pointer;
 `
 
 const DarkMode = ({
