@@ -11,13 +11,13 @@ const Container = styled.div`
 `
 
 const Icon = styled.img`
-    height: 2vw;
+    
 `
 
 const SocialLink =({
     //props
     onButtonClick=()=>{},
-    icon='/githubIcon.png',
+    icon='/images/githubIcon.png',
 }) => {
 
     const {theme} = useTheme()

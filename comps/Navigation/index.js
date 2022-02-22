@@ -10,6 +10,9 @@ import DarkMode from '/comps/DarkMode'
 
 const Container = styled.div`
     display: flex;
+    padding-left: 6%;
+    padding-right: 6%;
+    width: 100vw;
     height: 4.5vw;
     justify-content: center;
     align-items: center;
@@ -51,14 +54,14 @@ const Navigation = ({
         <Logo color={themes[theme].text}>H.</Logo>
         <LinkContainer>
             <Link href="../">
-                <LinkText onClick={'#about'} color={themes[theme].text}>Home</LinkText>
+                <LinkText color={themes[theme].text}>Home</LinkText>
             </Link>
             
             <Link href="../#about">
                 <LinkText color={themes[theme].text}>About</LinkText>
             </Link>
             
-            <Link href="../#about">
+            <Link href="../#project">
                 <LinkText color={themes[theme].text}>Projects</LinkText>
             </Link>
         </LinkContainer>
