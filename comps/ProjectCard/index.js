@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import {useTheme} from "../../utils/provider"
 import {themes} from "../../utils/variable"
+import {useRouter} from 'next/router' 
 
 const ProjectIcon = styled.img`
     z-index: 2;
@@ -31,11 +33,13 @@ const ProjectCard =({
     //props
     projectImage = "/images/nuanceprev.png",
     projectIcon = "/images/nuancelogoprev.png",
-    onButtonClick= ()=>{}
+    routeTo = "/"
 }) => {
 
     const {theme} = useTheme()
-    return <Container projectImage={projectImage} onClick={()=>{onButtonClick()}}>
+    const router = useRouter()
+
+    return <Container projectImage={projectImage} onClick={()=>router.push(routeTo)}>
         <ProjectIcon src={projectIcon} />
     </Container>
 

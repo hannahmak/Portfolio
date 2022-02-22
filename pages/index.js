@@ -1,7 +1,9 @@
+import React from 'react'
 import styled from 'styled-components'
 import {useTheme} from '../utils/provider'
 import {themes} from "../utils/variable"
-import { device } from "../utils/device";
+import { device } from "../utils/device"
+import {useRouter} from 'next/router' 
 
 // components
 import Navigation from '../comps/Navigation'
@@ -180,6 +182,7 @@ const ProjectContainer = styled.div`
 export default function Home() {
 
   const {theme, setTheme} = useTheme()
+  const router = useRouter()
 
   return (
     <Container>
@@ -255,14 +258,17 @@ export default function Home() {
 
       {/* Projects Page Overview */}
       <ProjectContainer>
-        <ProjectCard />
-        <ProjectCard projectImage={"/images/mindulprev.png"} projectIcon={"/images/mindfullogoprev.png"} />
-        <ProjectCard projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
-        <ProjectCard projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"} />
-        <ProjectCard projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
-        <ProjectCard projectImage={"/images/promsprev.png"}/>
-        <ProjectCard projectImage={"/images/dysonprev.png"}/>
-        <ProjectCard projectImage={"/images/thenaprev.png"}/>
+        {/* Dev Work */}
+        <ProjectCard routeTo={"/projects/nuance"} />
+        <ProjectCard routeTo={"/projects/mindful"} projectImage={"/images/mindulprev.png"} projectIcon={"/images/mindfullogoprev.png"} />
+        <ProjectCard routeTo={"/projects/calorielab"} projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
+        <ProjectCard routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
+
+        {/* Design Work - One Page */}
+        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} />
+        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
+        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/dysonprev.png"} projectIcon={"/images/illusicon.png"} />
+        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/thenaprev.png"} projectIcon={"/images/photoshopicon.png"} />
       </ProjectContainer>
     </Container>
   )
