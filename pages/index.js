@@ -265,7 +265,7 @@ export default function Home() {
         <ProjectCard routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
 
         {/* Design Work - One Page */}
-        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} />
+        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"}/>
         <ProjectCard routeTo={"/projects/design"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
         <ProjectCard routeTo={"/projects/design"} projectImage={"/images/dysonprev.png"} projectIcon={"/images/illusicon.png"} />
         <ProjectCard routeTo={"/projects/design"} projectImage={"/images/thenaprev.png"} projectIcon={"/images/photoshopicon.png"} />
