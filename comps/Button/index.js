@@ -6,16 +6,16 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13vw;
-    height: 4.5vw;
+    width: 152px;
+    height: 50px;
     border-radius: 100px;
     background-color: #C4D2FA;
     cursor: pointer;
 `
 
 const Text = styled.p`
-    font-size: 1.5vw;
-    font-weight: 700;
+    font-size: 18px;
+    font-family: boldtext;
     color: ${props=>props.color};
 `
 

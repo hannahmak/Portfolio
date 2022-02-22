@@ -13,18 +13,17 @@ const Container = styled.div`
     padding-left: 6%;
     padding-right: 6%;
     width: 100vw;
-    height: 4.5vw;
+    height: 75px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2%;
     background: ${props=>props.bgcolor} linear-gradient(111.68deg, rgba(255, 255, 255, 0.29) 7.59%, rgba(255, 255, 255, 0.39) 102.04%);
     backdrop-filter: blur(18.7896px);
 `
 
 const Logo = styled.div`
     margin-right: auto;
-    font-weight: 700;
-    font-size: 1.5vw;
+    font-family: boldtext;
+    font-size: 24px;
     color: ${props=>props.color};
 `
 
@@ -34,12 +33,13 @@ const LinkContainer = styled.div`
 `
 
 const LinkText = styled.a`
-    font-weight: 700;
-    font-size: 1vw;
+    font-family: boldtext;
+    font-size: 18px;
+    text-align: center;
     color: ${props=>props.color};
-    padding: 2.47vw;
-    a:active { 
-        background-color: #ABC1FF;
+    padding: 2vw;
+    a:focus { 
+        color: #ABC1FF;
       }
 
 `

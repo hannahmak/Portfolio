@@ -8,6 +8,7 @@ const ProjectIcon = styled.img`
 `
 
 const Container = styled.div`
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

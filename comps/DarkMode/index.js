@@ -3,10 +3,11 @@ import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
 
 const Button = styled.button`
+    cursor: pointer;    
     margin-left: auto;
-    background-size: 1.8vw;
-    height: 40px;
-    width: 1.8vw;
+    background-size: auto;
+    height: 25px;
+    width: 44px;
     background-image: url(${props=>props.icon});
     background-position: center;
     background-repeat: no-repeat;

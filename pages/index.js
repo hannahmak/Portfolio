@@ -9,7 +9,8 @@ import Button from '../comps/Button'
 import DarkMode from '../comps/DarkMode'
 import SocialLink from '../comps/SocialLink'
 import ScrollIcon from '../comps/ScrollIcon'
-import ProjectCard from '../comps/ProjectCard';
+import ProjectCard from '../comps/ProjectCard'
+import SkillIcon from '../comps/SkillIcon'
 
 // global styles
 const Container = styled.div`
@@ -38,7 +39,7 @@ const ContentContainer = styled.div`
   padding-bottom: 1%;
   padding-right: 1%;
   margin-bottom: 25vh;
-  margin-top: 15vh;
+  margin-top: 14vh;
 `
 
 // Home Styles
@@ -52,21 +53,21 @@ const RightContainer = styled.div`
 `
 
 const JobTitle = styled.p`
-  font-weight: bold;
-  font-size: 1.5vw;
+  font-family: boldtext;
+  font-size: 24px;
   color: ${props=>props.color};
   margin-bottom: 5%;
 `
 
 const Title = styled.p`
-  font-size: 4.6vw;
-  font-weight: bold;
+  font-size: 72px;
+  font-family: boldtext;
   color: ${props=>props.color};
   margin-bottom: 5%;
 `
 
 const Caption = styled.p`
-  font-size: 1.5vw;
+  font-size: 24px;
   color: ${props=>props.color};
   opacity: 67%;
   margin-bottom: 10%;
@@ -93,6 +94,22 @@ const SocialContainer = styled.div`
 //about styles
 const Tag = styled.div``
 
+const ContentContainerAbout = styled.div`
+  display: flex;
+  margin-left: 6%;
+  margin-right 6%;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: ${props=>props.boxColor};
+  height: 70vh;
+  padding-left: 5%;
+  padding-bottom: 1%;
+  padding-right: 1%;
+  margin-bottom: 25vh;
+  margin-top: 14vh;
+`
+
 const ProfilePictureContainer = styled.div`
   display: flex;
   flex-grow: 2;
@@ -116,16 +133,16 @@ const ProfileDescriptionContainer = styled.div`
 `
 
 const Heading = styled.div`
-  font-size: 2vw;
-  font-weight: bold;
+  font-size: 36px;
+  font-family: boldtext;
   color: ${props=>props.color};
   margin-bottom: 4%;
 `
 
 const AboutDesc = styled.div`
   color: ${props=>props.color};
-  font-size: 1vw;
-  line-height: 2vw;
+  font-size: 18px;
+  line-height: 30px;
 `
 
 const SocialContainerAbout = styled.div`
@@ -137,7 +154,14 @@ const SocialContainerAbout = styled.div`
 `
 
 const SkillsContainer = styled.div`
-
+  display: flex;
+  justify-content: center;
+  felx-direction: row;
+  flex-wrap: wrap;
+  margin-top: -200px;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 200px;
 `
 
 const ProjectContainer = styled.div`
@@ -189,7 +213,7 @@ export default function Home() {
       <Tag id="about" />
 
       {/* About Page */}
-      <ContentContainer boxColor={themes[theme].boxColor}>
+      <ContentContainerAbout boxColor={themes[theme].boxColor}>
         <ProfilePictureContainer>
           <ProfilePicture src='/images/profilePic.png'/>
         </ProfilePictureContainer>
@@ -207,7 +231,25 @@ export default function Home() {
             <SocialLink icon={themes[theme].socialIconDribble} onButtonClick={()=>{window.open('https://dribbble.com/hannahmakmac')}}/>
         </SocialContainerAbout>
         </ProfileDescriptionContainer>
-      </ContentContainer>
+      </ContentContainerAbout>
+
+      <SkillsContainer>
+        <SkillIcon bg={themes[theme].skillIconBg} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/figmaicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sketchicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/photoshopicon.png"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/indesignicon.png"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/html5icon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/cssicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sassicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/reacticon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/jsicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/styledcompicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nexticon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/vercelicon.svg"} />
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nodeicon.svg"} />
+      </SkillsContainer>
 
       <Tag id="project" />
 
@@ -220,7 +262,6 @@ export default function Home() {
         <ProjectCard projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
         <ProjectCard projectImage={"/images/promsprev.png"}/>
         <ProjectCard projectImage={"/images/dysonprev.png"}/>
-        <ProjectCard projectImage={"/images/minimalprev.png"}/>
         <ProjectCard projectImage={"/images/thenaprev.png"}/>
       </ProjectContainer>
     </Container>

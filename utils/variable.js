@@ -9,7 +9,8 @@ export const themes = {
         scrollIcon: '/images/scrollIconLightMode.png',
         socialIconLink: "/images/linkedinlight.png",
         socialIconGit: "/images/githublight.png",
-        socialIconDribble: "/images/dribblelight.png"
+        socialIconDribble: "/images/dribblelight.png", 
+        skillIconBg: "#E3EAFA",
     },
     
     dark:{
@@ -22,6 +23,7 @@ export const themes = {
         scrollIcon: '/images/scrollIconDarkMode.png',
         socialIconLink: "/images/linkedindark.png",
         socialIconGit: "/images/githubdark.png",
-        socialIconDribble: "/images/dribbledark.png"
+        socialIconDribble: "/images/dribbledark.png",
+        skillIconBg: "#888B8F",
     }
 }

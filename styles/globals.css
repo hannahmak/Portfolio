@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "boldtext";
+  src: url(../public/fonts/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: "regulartext";
+  src: url(../public/fonts/SF-Pro-Display-Regular.otf);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,16 +16,21 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont;
+  font-family: regulartext;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont;
+  font-family: regulartext;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "boldtext";
 }
 
 p {
+    font-family: regulartext;
     padding: 0;
     margin: 0;
 }
