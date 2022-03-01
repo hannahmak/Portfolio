@@ -4,6 +4,7 @@ import {useTheme} from '../utils/provider'
 import {themes} from "../utils/variable"
 import { device } from "../utils/device"
 import {useRouter} from 'next/router' 
+import { Carousel } from '@trendyol-js/react-carousel'
 
 // components
 import Navigation from '../comps/Navigation'
@@ -49,48 +50,75 @@ const RightContainer = styled.div`
   display: flex;
   flex-grow: 2;
   flex-direction: column;
-  margin-right: 5%;
   text-align:left;
-  width: 40vw;
+
+  z-index: 2;
+
 `
 
 const JobTitle = styled.p`
   font-family: boldtext;
   font-size: 24px;
   color: ${props=>props.color};
-  margin-bottom: 5%;
+  margin-bottom: 24px;
+  @media only screen and (max-width: 1200px) {
+    font-size: 18px;
+  }
 `
 
 const Title = styled.p`
   font-size: 72px;
   font-family: boldtext;
   color: ${props=>props.color};
-  margin-bottom: 5%;
+  margin-bottom: 24px;
+  @media only screen and (max-width: 1200px) {
+    font-size: 54px;
+  }
 `
 
 const Caption = styled.p`
   font-size: 24px;
   color: ${props=>props.color};
   opacity: 67%;
-  margin-bottom: 10%;
+  margin-bottom: 54px;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 18px;
+  }
 `
 
 const LeftContainer = styled.div`
   display: flex;
-  flex-grow: 2;
+  justify-content: center;
+  align-items: center;
+  
   height: 85vh;
   width: 40vw;
 `
 
-const Avatar = styled.img``
+const Avatar = styled.img`
+  z-index: 1;
+  width: 105%;
+
+  @media only screen and (max-width: 1366px) {
+    width: 135%;
+  }
+
+  @media only screen and (max-width: 922px) {
+    width: 160%;
+  }
+
+  @media only screen and (max-width: 822px) {
+    width: 300%;
+  }
+`
 
 const SocialContainer = styled.div`
   display: flex;
-  flex-grow: 0.5;
+  margin-left: 20px;
   flex-direction: column;
   align-self: flex-end;
   justify-content: space-between;
-  width: 5vw;
 `
 
 //about styles
@@ -159,7 +187,6 @@ const SkillsContainer = styled.div`
   display: flex;
   justify-content: center;
   felx-direction: row;
-  flex-wrap: wrap;
   margin-top: -200px;
   margin-left: 6%;
   margin-right: 6%;
@@ -201,9 +228,9 @@ export default function Home() {
           <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}}></Button>
         </RightContainer>
 
-        <LeftContainer>
+      <LeftContainer>
           <Avatar src={'images/circleMain.png'}></Avatar>
-        </LeftContainer>
+        </LeftContainer> 
 
         <SocialContainer>
             <SocialLink icon={'/images/linkedinIcon.png'} onButtonClick={()=>{window.open('https://www.linkedin.com/in/hannah-macpherson-082092226/')}}/>
@@ -237,23 +264,25 @@ export default function Home() {
       </ContentContainerAbout>
 
       <SkillsContainer>
-        <SkillIcon bg={themes[theme].skillIconBg} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/figmaicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sketchicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/photoshopicon.png"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/indesignicon.png"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/html5icon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/cssicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sassicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/reacticon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/jsicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/styledcompicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nexticon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/vercelicon.svg"} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nodeicon.svg"} />
+        <Carousel show={10} slide={2} transition={0.5} swiping={true}>
+          <SkillIcon bg={themes[theme].skillIconBg} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/figmaicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sketchicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/photoshopicon.png"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/indesignicon.png"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/html5icon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/cssicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sassicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/reacticon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/jsicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/styledcompicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nexticon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/vercelicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nodeicon.svg"} />
+        </Carousel>
       </SkillsContainer>
-
+    
       <Tag id="project" />
 
       {/* Projects Page Overview */}
@@ -266,7 +295,7 @@ export default function Home() {
 
         {/* Design Work - One Page */}
         <ProjectCard routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"}/>
-        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
+        <ProjectCard routeTo={"/projects/design/"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
         <ProjectCard routeTo={"/projects/design"} projectImage={"/images/dysonprev.png"} projectIcon={"/images/illusicon.png"} />
         <ProjectCard routeTo={"/projects/design"} projectImage={"/images/thenaprev.png"} projectIcon={"/images/photoshopicon.png"} />
       </ProjectContainer>

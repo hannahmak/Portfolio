@@ -44,13 +44,13 @@ export default function Design() {
         <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
       </NavigationContainer>
 
-      <ContentContainer>
+      <ContentContainer  id="thena">
         <DesignCard text={"Thena Painting"} icon={"/images/photoshopicon.png"}/>
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer  id="dyson">
         <DesignCard projectImage={"/images/dysonwork.png"} text={"Dyson Corale Technical Drawing"} icon={"/images/illusicon.png"}/>
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer  id="proms">
         <DesignCard projectImage={"/images/posterwork.png"} text={"The Proms Poster"} icon={"/images/illusicon.png"}/>
       </ContentContainer>
  
