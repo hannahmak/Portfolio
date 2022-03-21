@@ -21,12 +21,10 @@ const SkillIcon =({
     //props
     onButtonClick=()=>{},
     icon='/images/vsicon.svg',
-    bg = "#FFF"
-  
 }) => {
 
     const {theme} = useTheme()
-    return <Container bg={bg} onClick={()=>{onButtonClick()}}>
+    return <Container bg={themes[theme].skillIconBg} onClick={()=>{onButtonClick()}}>
         <Icon src={icon} />
     </Container>
 

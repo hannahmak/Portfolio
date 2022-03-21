@@ -10,6 +10,7 @@ export const themes = {
         socialIconLink: "/images/linkedinlight.png",
         socialIconGit: "/images/githublight.png",
         socialIconDribble: "/images/dribblelight.png", 
+        demoIcon: "/images/demoicon.svg",
         skillIconBg: "#E3EAFA",
     },
     
@@ -24,6 +25,7 @@ export const themes = {
         socialIconLink: "/images/linkedindark.png",
         socialIconGit: "/images/githubdark.png",
         socialIconDribble: "/images/dribbledark.png",
+        demoIcon: "/images/demoicondark.svg",
         skillIconBg: "#888B8F",
     }
 }

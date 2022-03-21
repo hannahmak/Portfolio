@@ -56,7 +56,7 @@ const RightContainer = styled.div`
 
 `
 
-const JobTitle = styled.p`
+const JobTitle = styled.h2`
   font-family: boldtext;
   font-size: 24px;
   color: ${props=>props.color};
@@ -66,10 +66,11 @@ const JobTitle = styled.p`
   }
 `
 
-const Title = styled.p`
+const Title = styled.h1`
   font-size: 72px;
   font-family: boldtext;
   color: ${props=>props.color};
+  margin: 0;
   margin-bottom: 24px;
   @media only screen and (max-width: 1200px) {
     font-size: 54px;
@@ -162,7 +163,7 @@ const ProfileDescriptionContainer = styled.div`
   margin-right: 10%;
 `
 
-const Heading = styled.div`
+const Heading = styled.h2`
   font-size: 36px;
   font-family: boldtext;
   color: ${props=>props.color};
@@ -196,13 +197,48 @@ const SkillsContainer = styled.div`
 const ProjectContainer = styled.div`
   display: flex;
   z-index: 0;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  align-content: center;
   margin-left: 6%;
   margin-right: 6%;
   margin-bottom: 25vh;
-  margin-top: 15vh;
+  margin-top: 8vh;
+`
+
+const ProjectCatContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const CatHeading = styled.h3`
+  font-family: boldtext;
+  font-size: 24px;
+  line-height: 29px;
+  color: ${props=>props.color};
+  margin-left: 20px;
+  margin-bottom: -10px;
+`
+
+const ProjectDevContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+const ProjectDesignContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 353px;
+  height: 353px;
+  margin: 16px;
+`
+
+const DesignProjectRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `
 
 
@@ -287,17 +323,38 @@ export default function Home() {
 
       {/* Projects Page Overview */}
       <ProjectContainer>
-        {/* Dev Work */}
-        <ProjectCard routeTo={"/projects/nuance"} />
-        <ProjectCard routeTo={"/projects/mindful"} projectImage={"/images/mindulprev.png"} projectIcon={"/images/mindfullogoprev.png"} />
-        <ProjectCard routeTo={"/projects/calorielab"} projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
-        <ProjectCard routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
 
-        {/* Design Work - One Page */}
-        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"}/>
-        <ProjectCard routeTo={"/projects/design/"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
-        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/dysonprev.png"} projectIcon={"/images/illusicon.png"} />
-        <ProjectCard routeTo={"/projects/design"} projectImage={"/images/thenaprev.png"} projectIcon={"/images/photoshopicon.png"} />
+        {/* Dev Work */}
+        <ProjectCatContainer>
+          <CatHeading color={themes[theme].text}>Development</CatHeading>
+          <ProjectDevContainer>
+            <ProjectCard iconwidth="200px" routeTo={"/projects/nuance"} margin="16px" />
+            <ProjectCard iconwidth="200px" routeTo={"/projects/mindful"} margin="16px" projectImage={"/images/mindfulprev.png"} projectIcon={"/images/mindfullogoprev.png"} />
+          </ProjectDevContainer>
+        </ProjectCatContainer>
+
+   
+        <DesignProjectRow>
+          {/* UI/UX Work */}
+          <ProjectCatContainer>
+            <CatHeading color={themes[theme].text}>UI/UX</CatHeading>
+            <ProjectDesignContainer>
+              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/calorielab"} projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
+              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
+              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"}/>
+            </ProjectDesignContainer>
+          </ProjectCatContainer>
+       
+          {/* Graphic Work */}
+          <ProjectCatContainer>
+            <CatHeading color={themes[theme].text}>Graphic Design</CatHeading>
+            <ProjectDesignContainer>
+              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design/"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
+              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/dysonprev.png"} projectIcon={"/images/illusicon.png"} />
+              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/thenaprev.png"} projectIcon={"/images/photoshopicon.png"} />
+            </ProjectDesignContainer>
+          </ProjectCatContainer>
+        </DesignProjectRow>
       </ProjectContainer>
     </Container>
   )

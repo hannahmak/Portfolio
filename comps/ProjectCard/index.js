@@ -7,6 +7,7 @@ import {useRouter} from 'next/router'
 const ProjectIcon = styled.img`
     z-index: 2;
     opacity: 0;
+    width: ${props=>props.iconwidth};
 `
 
 const Container = styled.div`
@@ -14,15 +15,19 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 316px;
-    height: 316px;
+    width: ${props=>props.width};
+    height: ${props=>props.height};
     z-index: 1;
     background: url(${props=>props.projectImage});
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
-    margin: 0.5%;
+    margin:${props=>props.margin};
 
     &:hover {
         background: linear-gradient(0deg, rgba(238, 242, 250, 0.8), rgba(238, 242, 250, 0.8)), url(${props=>props.projectImage});
+        background-repeat: no-repeat;
+        background-size: cover;
         ${ProjectIcon}{
             opacity: 1;
         }
@@ -31,6 +36,10 @@ const Container = styled.div`
 
 const ProjectCard =({
     //props
+    width = "353px",
+    height = "353px",
+    margin = "3.95px",
+    iconwidth = "140px",
     projectImage = "/images/nuanceprev.png",
     projectIcon = "/images/nuancelogoprev.png",
     routeTo = "/"
@@ -39,8 +48,8 @@ const ProjectCard =({
     const {theme} = useTheme()
     const router = useRouter()
 
-    return <Container projectImage={projectImage} onClick={()=>router.push(routeTo)}>
-        <ProjectIcon src={projectIcon} />
+    return <Container projectImage={projectImage} onClick={()=>router.push(routeTo)} width={width} height={height} margin={margin}>
+        <ProjectIcon src={projectIcon} iconwidth={iconwidth}/>
     </Container>
 
 }
