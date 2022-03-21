@@ -109,12 +109,22 @@ const ProjectDemo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 114px;
 `
 
+const MockImgCont = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 const MockImg = styled.img`
   height: 722.75px;
 `
 
+const UXContainer = styled.div`
+  margin-top: 253px;
+  margin-bottom: 100px;
+`
 
 export default function Nuance() {
 
@@ -171,11 +181,29 @@ export default function Nuance() {
 
       <ProjectDemo>
         <Carousel show={3} slide={1} transition={0.5} swiping={true}>
-          <MockImg src="/images/nuancemock1.png"></MockImg>
-          <MockImg src="/images/nuancemock2.png"></MockImg>
-          <MockImg src="/images/nuancemock3.png"></MockImg>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock1.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock2.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock3.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock4.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock5.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock6.png" />
+          </MockImgCont>
         </Carousel>
-        <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+        
       </ProjectDemo>
 
 
