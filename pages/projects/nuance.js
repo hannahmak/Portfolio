@@ -44,12 +44,11 @@ const ProjectSumContainer = styled.div`
   margin-right 6%;
 `
 
-const ProjectLogo = styled.img`
-
-`
+const ProjectLogo = styled.img``
 
 const ProjectDescContainer = styled.div`
   display: flex;
+  margin-left: -10%;
   flex-direction: column;
   align-content: flex-end; 
   margin-bottom: 2%;
@@ -67,6 +66,7 @@ const ProjectInfoContainer = styled.div`
   justify-content: space-between;
   color: ${props=>props.color};
   margin-right: 6%;
+  width: 30vw;
 `
 const ProjectInfoIndvContainer = styled.div`
   display: flex;

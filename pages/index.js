@@ -330,6 +330,7 @@ export default function Home() {
           <ProjectDevContainer>
             <ProjectCard iconwidth="200px" routeTo={"/projects/nuance"} margin="16px" />
             <ProjectCard iconwidth="200px" routeTo={"/projects/mindful"} margin="16px" projectImage={"/images/mindfulprev.png"} projectIcon={"/images/mindfullogoprev.png"} />
+            <ProjectCard iconwidth="400px" margin="16px"  routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
           </ProjectDevContainer>
         </ProjectCatContainer>
 
@@ -340,7 +341,6 @@ export default function Home() {
             <CatHeading color={themes[theme].text}>UI/UX</CatHeading>
             <ProjectDesignContainer>
               <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/calorielab"} projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
-              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
               <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"}/>
             </ProjectDesignContainer>
           </ProjectCatContainer>
