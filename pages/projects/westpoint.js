@@ -32,7 +32,6 @@ const NavigationContainer = styled.div`
 const ProjectSumBg = styled.div`
   display: flex;
   width: 100vw;
-  height: 735px;
   background-color: ${props=>props.bg};
 `
 
@@ -42,9 +41,27 @@ const ProjectSumContainer = styled.div`
   align-items: flex-end;
   margin-left: 6%;
   margin-right 6%;
+  @media only screen and (max-width: 600px) {
+    margin-top: 20%;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right 0%;
+  }
 `
 
-const ProjectLogo = styled.img``
+const ProjectLogo = styled.img`
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`
+
+const ProjectLogoSmall = styled.img`
+  width: 100%;
+  margin-bottom: 20%;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+`
 
 const ProjectDescContainer = styled.div`
   display: flex;
@@ -52,12 +69,21 @@ const ProjectDescContainer = styled.div`
   flex-direction: column;
   align-content: flex-end; 
   margin-bottom: 2%;
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+    margin-left: 3%;
+    margin-right 3%;
+  }
 `
 
 const ProjectDesc = styled.p`
   font-size: 18px;
   line-height: 30px;
   color: ${props=>props.color};
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+    text-align: center
+  }
 `
 
 const ProjectInfoContainer = styled.div`
@@ -67,10 +93,16 @@ const ProjectInfoContainer = styled.div`
   color: ${props=>props.color};
   margin-right: 6%;
   width: 30vw;
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `
 const ProjectInfoIndvContainer = styled.div`
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    margin: 20%;
+  }
 `
 
 const ProjectInfoHeading = styled.p`
@@ -88,6 +120,9 @@ const ProjectInfoDescription = styled.p`
 const ProjectLinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 10%;
+  }
 `
 
 const ProjectLinkIndvContainer = styled.div`
@@ -124,6 +159,9 @@ const MockImg = styled.img`
 const UXContainer = styled.div`
   margin-top: 253px;
   margin-bottom: 100px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 50px;
+  }
 `
 
 export default function Westpoint() {
@@ -139,9 +177,10 @@ export default function Westpoint() {
 
         <ProjectSumContainer>
           <ProjectLogo src='/images/westpointprologo.svg'/>
+          <ProjectLogoSmall src='/images/westSmall.svg'/>
           <ProjectDescContainer>
             <ProjectDesc color={themes[theme].text}>
-              Westpoint Hotel is a luxury Cariabean Hotel
+              Westpoint Hotel is a luxury Cariabean hotel wordpress website.
             </ProjectDesc>
             
             <ProjectInfoContainer color={themes[theme].text}>

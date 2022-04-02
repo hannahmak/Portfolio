@@ -32,7 +32,6 @@ const NavigationContainer = styled.div`
 const ProjectSumBg = styled.div`
   display: flex;
   width: 100vw;
-  height: 735px;
   background-color: ${props=>props.bg};
 `
 
@@ -42,9 +41,27 @@ const ProjectSumContainer = styled.div`
   align-items: flex-end;
   margin-left: 6%;
   margin-right 6%;
+  @media only screen and (max-width: 600px) {
+    margin-top: 20%;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right 0%;
+  }
 `
 
-const ProjectLogo = styled.img``
+const ProjectLogo = styled.img`
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`
+
+const ProjectLogoSmall = styled.img`
+  width: 100%;
+  margin-bottom: 20%;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+`
 
 const ProjectDescContainer = styled.div`
   display: flex;
@@ -52,12 +69,21 @@ const ProjectDescContainer = styled.div`
   flex-direction: column;
   align-content: flex-end; 
   margin-bottom: 2%;
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+    margin-left: 3%;
+    margin-right 3%;
+  }
 `
 
 const ProjectDesc = styled.p`
   font-size: 18px;
   line-height: 30px;
   color: ${props=>props.color};
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+    text-align: center
+  }
 `
 
 const ProjectInfoContainer = styled.div`
@@ -67,10 +93,16 @@ const ProjectInfoContainer = styled.div`
   color: ${props=>props.color};
   margin-right: 6%;
   width: 30vw;
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `
 const ProjectInfoIndvContainer = styled.div`
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    margin: 20%;
+  }
 `
 
 const ProjectInfoHeading = styled.p`
@@ -88,6 +120,9 @@ const ProjectInfoDescription = styled.p`
 const ProjectLinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 10%;
+  }
 `
 
 const ProjectLinkIndvContainer = styled.div`
@@ -110,6 +145,20 @@ const ProjectDemo = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 114px;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`
+
+const ProjectDemoSmall = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 114px;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
 `
 
 const MockImgCont = styled.div`
@@ -124,6 +173,9 @@ const MockImg = styled.img`
 const UXContainer = styled.div`
   margin-top: 253px;
   margin-bottom: 100px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 50px;
+  }
 `
 
 export default function Mindful() {
@@ -139,6 +191,7 @@ export default function Mindful() {
 
         <ProjectSumContainer>
           <ProjectLogo src='/images/mindfulprologo.svg'/>
+          <ProjectLogoSmall src='/images/mindfulSmall.svg'/>
           <ProjectDescContainer>
             <ProjectDesc color={themes[theme].text}>
             Mindful is an application that tries to encourages users to take a moment out of their day to practice mindful reflections, whether that be how they feel, what they did that day, or just talk in general. It gives an opportunity for users to have an open platform where they can share their emotions with close friends or just themselves.
@@ -204,6 +257,32 @@ export default function Mindful() {
           <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
         </UXContainer>
       </ProjectDemo>
+
+      <ProjectDemoSmall>
+        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock1.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock2.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock3.png" /> 
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock4.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock5.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock6.png" />
+          </MockImgCont>
+        </Carousel>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemoSmall>
     </Container>
   )
 }

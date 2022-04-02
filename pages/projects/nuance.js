@@ -47,8 +47,6 @@ const ProjectSumContainer = styled.div`
     margin-left: 0%;
     margin-right 0%;
   }
-
-  
 `
 
 const ProjectLogo = styled.img`
@@ -56,12 +54,6 @@ const ProjectLogo = styled.img`
     display: none;
   }
 `
-// const ProjectLogoSmallContainer = styled.div`
-//   margin-right: 600px;
-//   @media only screen and (min-width: 600px) {
-//     display: none;
-//   }
-// `
 
 const ProjectLogoSmall = styled.img`
   width: 100%;
@@ -79,7 +71,8 @@ const ProjectDescContainer = styled.div`
   margin-bottom: 2%;
   @media only screen and (max-width: 600px) {
     align-items: center;
-    margin-left: 1%;
+    margin-left: 3%;
+    margin-right 3%;
   }
 `
 

@@ -267,7 +267,8 @@ const SkillsContainerSmall = styled.div`
   display: flex;
   margin-left: 6%;
   margin-right: 6%;
-  margin-top: 10%;
+  margin-top: 15%;
+  margin-bottom: 20%;
   @media only screen and (min-width: 600px) {
     display: none;
   }
