@@ -41,6 +41,9 @@ const LinkText = styled.a`
     a:focus { 
         color: #ABC1FF;
       }
+    @media only screen and (max-width : 600px){
+        font-size: 14px;
+    }
 
 `
 

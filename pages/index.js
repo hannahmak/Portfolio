@@ -132,9 +132,9 @@ const Avatar = styled.img`
 
 const AvatarSmall = styled.img`
   @media only screen and (max-width: 600px) {
-    width: 250%;
+    width: 300%;
     margin-top: 200px;
-    margin-right: 300px;
+    margin-left: -200px;
   }
   @media only screen and (min-width: 600px) {
     display: none;
@@ -147,6 +147,9 @@ const SocialContainer = styled.div`
   flex-direction: column;
   align-self: flex-end;
   justify-content: space-between;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 
@@ -196,7 +199,7 @@ const ProfilePictureContainerSmall = styled.div`
 const ProfilePicture = styled.img`
   width: 90%;
   @media only screen and (max-width: 600px) {
-    width: 100%px;
+    width: 100%;
     margin-top: 200px
     margin-bottom: 30px;
   }
