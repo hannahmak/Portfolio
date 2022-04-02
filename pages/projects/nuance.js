@@ -32,7 +32,6 @@ const NavigationContainer = styled.div`
 const ProjectSumBg = styled.div`
   display: flex;
   width: 100vw;
-  height: 735px;
   background-color: ${props=>props.bg};
 `
 
@@ -42,9 +41,35 @@ const ProjectSumContainer = styled.div`
   align-items: flex-end;
   margin-left: 6%;
   margin-right 6%;
+  @media only screen and (max-width: 600px) {
+    margin-top: 20%;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right 0%;
+  }
+
+  
 `
 
-const ProjectLogo = styled.img``
+const ProjectLogo = styled.img`
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`
+// const ProjectLogoSmallContainer = styled.div`
+//   margin-right: 600px;
+//   @media only screen and (min-width: 600px) {
+//     display: none;
+//   }
+// `
+
+const ProjectLogoSmall = styled.img`
+  width: 100%;
+  margin-bottom: 20%;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+`
 
 const ProjectDescContainer = styled.div`
   display: flex;
@@ -52,12 +77,20 @@ const ProjectDescContainer = styled.div`
   flex-direction: column;
   align-content: flex-end; 
   margin-bottom: 2%;
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+    margin-left: 1%;
+  }
 `
 
 const ProjectDesc = styled.p`
   font-size: 18px;
   line-height: 30px;
   color: ${props=>props.color};
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+    text-align: center
+  }
 `
 
 const ProjectInfoContainer = styled.div`
@@ -67,10 +100,16 @@ const ProjectInfoContainer = styled.div`
   color: ${props=>props.color};
   margin-right: 6%;
   width: 30vw;
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `
 const ProjectInfoIndvContainer = styled.div`
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    margin: 20%;
+  }
 `
 
 const ProjectInfoHeading = styled.p`
@@ -88,6 +127,9 @@ const ProjectInfoDescription = styled.p`
 const ProjectLinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 10%;
+  }
 `
 
 const ProjectLinkIndvContainer = styled.div`
@@ -110,6 +152,20 @@ const ProjectDemo = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 114px;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`
+
+const ProjectDemoSmall = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 114px;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
 `
 
 const MockImgCont = styled.div`
@@ -119,11 +175,18 @@ const MockImgCont = styled.div`
 `
 const MockImg = styled.img`
   height: 50vw;
+  @media only screen and (max-width: 600px) {
+    height: 100vw;
+  }
 `
 
 const UXContainer = styled.div`
   margin-top: 253px;
   margin-bottom: 100px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 50px;
+  }
+  
 `
 
 export default function Nuance() {
@@ -139,7 +202,11 @@ export default function Nuance() {
 
         <ProjectSumContainer>
           <ProjectLogo src='/images/nuanceprologo.svg'/>
+
+          <ProjectLogoSmall src='/images/nuanceSmall.svg'/>
           <ProjectDescContainer>
+
+
             <ProjectDesc color={themes[theme].text}>
               Nuance is an educational app related to cultural awareness and understanding. The goal of Nuance is to challenge users to question their thinking about important topics. Nuance presents all sides of an idea, free from the labels of partisanship and biases.
             </ProjectDesc>
@@ -203,8 +270,33 @@ export default function Nuance() {
         <UXContainer>
           <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
         </UXContainer>
-        
       </ProjectDemo>
+
+      <ProjectDemoSmall>
+        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock1.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock2.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock3.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock4.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock5.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/nuancemock6.png" />
+          </MockImgCont>
+        </Carousel>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemoSmall>
 
 
  
