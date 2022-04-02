@@ -165,12 +165,12 @@ export default function Mindful() {
 
             <ProjectLinksContainer>
               <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open(' https://hosted-nuacne-oo0zozfdx-hannahmak.vercel.app')}} />
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open('https://idsp3380-client.herokuapp.com')}} />
                 <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
               </ProjectLinkIndvContainer>
              
               <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={()=>{window.open('https://github.com/hannahmak/Nuance')}} />
+                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={()=>{window.open('https://github.com/hannahmak/mindful-frontend')}} />
                 <ProjectLinkDesc color={themes[theme].text}>Github</ProjectLinkDesc>
               </ProjectLinkIndvContainer>
 

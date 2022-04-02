@@ -118,7 +118,7 @@ const MockImgCont = styled.div`
   align-items: center;
 `
 const MockImg = styled.img`
-  height: 722.75px;
+  height: 50vw;
 `
 
 const UXContainer = styled.div`
