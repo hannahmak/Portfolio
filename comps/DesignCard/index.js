@@ -26,6 +26,9 @@ const ImageContainer = styled.div`
     margin-top: 38px;
     margin-bottom: 38px;
     margin-right: 78px;
+    @media only screen and (max-width: 600px) {
+        width: 90vw;
+      }
 `
 
 const ProjectCard =({
@@ -38,7 +41,7 @@ const ProjectCard =({
     return <Container >
         <Title color={themes[theme].text}>{text}</Title>
         <ImageContainer projectImage={projectImage} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/photoshopicon.png"}/>
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"}/>
     </Container>
 }
 

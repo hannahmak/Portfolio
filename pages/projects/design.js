@@ -27,6 +27,7 @@ const NavigationContainer = styled.div`
   width: 100%;
   position: fixed;  
   z-index: 2;
+  
 `
 
 const ContentContainer = styled.div`
