@@ -468,7 +468,6 @@ export default function Home() {
             <CatHeading color={themes[theme].text}>UI/UX</CatHeading>
             <ProjectDesignContainer>
               <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/calorielab"} projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
-              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/sproutprev.png"} projectIcon={"/images/sproutlogoprev.png"}/>
             </ProjectDesignContainer>
           </ProjectCatContainer>
        
