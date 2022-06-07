@@ -25,7 +25,7 @@ const Container = styled.div`
     margin:${props=>props.margin};
 
     &:hover {
-        background: linear-gradient(0deg, rgba(238, 242, 250, 0.8), rgba(238, 242, 250, 0.8)), url(${props=>props.projectImage});
+        background: linear-gradient(0deg, rgba(255, 248, 230, 0.8), rgba(255, 248, 230, 0.8)), url(${props=>props.projectImage});
         background-repeat: no-repeat;
         background-size: cover;
         ${ProjectIcon}{
@@ -40,8 +40,8 @@ const ProjectCard =({
     height = "353px",
     margin = "3.95px",
     iconwidth = "140px",
-    projectImage = "/images/nuanceprev.png",
-    projectIcon = "/images/nuancelogoprev.png",
+    projectImage = "/images/home/projects/nuanceprev.png",
+    projectIcon = "/images/home/projects/nuancelogoprev.svg",
     routeTo = "/"
 }) => {
 

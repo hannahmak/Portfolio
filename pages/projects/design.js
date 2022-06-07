@@ -46,13 +46,13 @@ export default function Design() {
       </NavigationContainer>
 
       <ContentContainer  id="thena">
-        <DesignCard text={"Thena Painting"} icon={"/images/photoshopicon.png"}/>
+        <DesignCard text={"Thena Painting"} icon={"/images/projects/design/photoshopicon.svg"}/>
       </ContentContainer>
       <ContentContainer  id="dyson">
-        <DesignCard projectImage={"/images/dysonwork.png"} text={"Dyson Corale Technical Drawing"} icon={"/images/illusicon.png"}/>
+        <DesignCard projectImage={"/images/projects/design/dysonwork.png"} text={"Dyson Corale Technical Drawing"} icon={"/images/illusicon.svg"}/>
       </ContentContainer>
       <ContentContainer  id="proms">
-        <DesignCard projectImage={"/images/posterwork.png"} text={"The Proms Poster"} icon={"/images/illusicon.png"}/>
+        <DesignCard projectImage={"/images/projects/design/posterwork.png"} text={"The Proms Poster"} icon={"/images/illusicon.svg"}/>
       </ContentContainer>
  
     </Container>

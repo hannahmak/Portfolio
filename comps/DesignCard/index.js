@@ -33,7 +33,7 @@ const ImageContainer = styled.div`
 
 const ProjectCard =({
     //props
-    projectImage = "/images/thenawork.png",
+    projectImage = "/images/projects/design/thenawork.png",
     text = "Title",
 }) => {
     const {theme} = useTheme()
@@ -41,7 +41,7 @@ const ProjectCard =({
     return <Container >
         <Title color={themes[theme].text}>{text}</Title>
         <ImageContainer projectImage={projectImage} />
-        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"}/>
+        <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/illusicon.svg"}/>
     </Container>
 }
 

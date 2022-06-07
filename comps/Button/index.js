@@ -9,7 +9,7 @@ const Container = styled.div`
     width: 152px;
     height: 50px;
     border-radius: 100px;
-    background-color: #C4D2FA;
+    background-color: #FFCF87;
     cursor: pointer;
     margin-top: 14vh;
     @media only screen and (max-width : 600px){

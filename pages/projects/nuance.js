@@ -194,9 +194,9 @@ export default function Nuance() {
         </NavigationContainer>
 
         <ProjectSumContainer>
-          <ProjectLogo src='/images/nuanceprologo.svg'/>
+          <ProjectLogo src='/images/projects/nuance/nuanceprologo.svg'/>
 
-          <ProjectLogoSmall src='/images/nuanceSmall.svg'/>
+          <ProjectLogoSmall src='/images/projects/nuance/nuanceSmall.svg'/>
           <ProjectDescContainer>
 
 
@@ -242,22 +242,22 @@ export default function Nuance() {
       <ProjectDemo>
         <Carousel show={3} slide={1} transition={0.5} swiping={true}>
           <MockImgCont>
-            <MockImg src="/images/nuancemock1.png" />
+            <MockImg src="/images/projects/nuance/nuancemock1.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock2.png" />
+            <MockImg src="/images/projects/nuance/nuancemock2.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock3.png" />
+            <MockImg src="/images/projects/nuance/nuancemock3.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock4.png" />
+            <MockImg src="/images/projects/nuance/nuancemock4.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock5.png" />
+            <MockImg src="/images/projects/nuance/nuancemock5.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock6.png" />
+            <MockImg src="/images/projects/nuance/nuancemock6.png" />
           </MockImgCont>
         </Carousel>
         <UXContainer>
@@ -268,22 +268,22 @@ export default function Nuance() {
       <ProjectDemoSmall>
         <Carousel show={1} slide={1} transition={0.5} swiping={true}>
           <MockImgCont>
-            <MockImg src="/images/nuancemock1.png" />
+            <MockImg src="/images/projects/nuance/nuancemock1.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock2.png" />
+            <MockImg src="/images/projects/nuance/nuancemock2.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock3.png" />
+            <MockImg src="/images/projects/nuance/nuancemock3.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock4.png" />
+            <MockImg src="/images/projects/nuance/nuancemock4.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock5.png" />
+            <MockImg src="/images/projects/nuance/nuancemock5.png" />
           </MockImgCont>
           <MockImgCont>
-            <MockImg src="/images/nuancemock6.png" />
+            <MockImg src="/images/projects/nuance/nuancemock6.png" />
           </MockImgCont>
         </Carousel>
         <UXContainer>

@@ -20,7 +20,7 @@ const Icon = styled.img`
 const SkillIcon =({
     //props
     onButtonClick=()=>{},
-    icon='/images/vsicon.svg',
+    icon='/images/home/skills/vsicon.svg',
 }) => {
 
     const {theme} = useTheme()

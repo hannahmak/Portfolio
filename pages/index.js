@@ -37,7 +37,7 @@ const ContentContainer = styled.div`
   display: flex;
   margin-left: 6%;
   margin-right 6%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-content: center;
   background-color: ${props=>props.boxColor};
@@ -292,6 +292,7 @@ const ProjectContainer = styled.div`
 
 const ProjectCatContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 `
 
@@ -352,14 +353,14 @@ export default function Home() {
         </RightContainer>
 
       <LeftContainer>
-          <Avatar src={'images/circleMain.png'}></Avatar>
-          <AvatarSmall src={'images/avatarSmall.svg'}/>
+          <Avatar src={'images/home/avatar/circleMain.svg'}></Avatar>
+          <AvatarSmall src={'images/home/avatar/avatarSmall.svg'}/>
         </LeftContainer> 
 
         <SocialContainer>
-            <SocialLink icon={'/images/linkedinIcon.png'} onButtonClick={()=>{window.open('https://www.linkedin.com/in/hannah-macpherson-082092226/')}}/>
+            <SocialLink icon={'/images/icons/linkedinIcon.svg'} onButtonClick={()=>{window.open('https://www.linkedin.com/in/hannah-macpherson-082092226/')}}/>
             <SocialLink onButtonClick={()=>{window.open('https://github.com/hannahmak')}}/>
-            <SocialLink icon={'/images/dribbleIcon.png'} onButtonClick={()=>{window.open('https://dribbble.com/hannahmakmac')}}/>
+            <SocialLink icon={'/images/icons/dribbleIcon.svg'} onButtonClick={()=>{window.open('https://dribbble.com/hannahmakmac')}}/>
         </SocialContainer>
   
       </ContentContainer>
@@ -369,7 +370,7 @@ export default function Home() {
       {/* About Page */}
       <ContentContainerAbout smallBox={themes[theme].body} boxColor={themes[theme].boxColor}>
         <ProfilePictureContainer>
-          <ProfilePicture src='/images/profilePic.png'/>
+          <ProfilePicture src='/images/home/avatar/profilePic.svg'/>
         </ProfilePictureContainer>
 
         <ProfileDescriptionContainer>
@@ -391,7 +392,7 @@ export default function Home() {
       {/* Small */}
       <ProfileContainerSmall>
         <ProfilePictureContainerSmall>
-          <ProfilePicture src='/images/profilePic.png'/>
+          <ProfilePicture src='/images/home/avatar/profilePic.svg'/>
         </ProfilePictureContainerSmall>
         <Heading color={themes[theme].text}>Get to Know Me!</Heading>
         <AboutDesc color={themes[theme].text}>
@@ -407,42 +408,42 @@ export default function Home() {
       </ProfileContainerSmall>
 
       <SkillsContainer>
-        <Carousel show={10} slide={2} transition={0.5} swiping={true}>
+        <Carousel show={10} slide={2} transition={0.5} swiping={true} center={true} showArrows={false}>
           <SkillIcon bg={themes[theme].skillIconBg} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/figmaicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sketchicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/photoshopicon.png"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/indesignicon.png"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/html5icon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/cssicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sassicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/reacticon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/jsicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/styledcompicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nexticon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/vercelicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nodeicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/figmaicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/sketchicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/illusicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/photoshopicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/indesignicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/html5icon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/cssicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/sassicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/reacticon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/jsicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/styledcompicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nexticon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/vercelicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nodeicon.svg"} />
         </Carousel>
       </SkillsContainer>
 
       <SkillsContainerSmall>
         <Carousel show={3} slide={1} transition={0.5} swiping={true}>
           <SkillIcon bg={themes[theme].skillIconBg} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/figmaicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sketchicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/illusicon.png"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/photoshopicon.png"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/indesignicon.png"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/html5icon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/cssicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/sassicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/reacticon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/jsicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/styledcompicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nexticon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/vercelicon.svg"} />
-          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/nodeicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/figmaicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/sketchicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/illusicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/photoshopicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/indesignicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/html5icon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/cssicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/sassicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/reacticon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/jsicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/styledcompicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nexticon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/vercelicon.svg"} />
+          <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nodeicon.svg"} />
         </Carousel>
       </SkillsContainerSmall>
     
@@ -456,8 +457,8 @@ export default function Home() {
           <CatHeading color={themes[theme].text}>Development</CatHeading>
           <ProjectDevContainer>
             <ProjectCard iconwidth="200px" routeTo={"/projects/nuance"} margin="16px" />
-            <ProjectCard iconwidth="200px" routeTo={"/projects/mindful"} margin="16px" projectImage={"/images/mindfulprev.png"} projectIcon={"/images/mindfullogoprev.png"} />
-            <ProjectCard iconwidth="400px" margin="16px"  routeTo={"/projects/westpoint"} projectImage={"/images/westpointprev.png"} projectIcon={"/images/westpointlogoprev.png"}/>
+            <ProjectCard iconwidth="200px" routeTo={"/projects/mindful"} margin="16px" projectImage={"/images/home/projects/mindfulprev.png"} projectIcon={"/images/home/projects/mindfullogoprev.svg"} />
+            
           </ProjectDevContainer>
         </ProjectCatContainer>
 
@@ -467,7 +468,8 @@ export default function Home() {
           <ProjectCatContainer>
             <CatHeading color={themes[theme].text}>UI/UX</CatHeading>
             <ProjectDesignContainer>
-              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/calorielab"} projectImage={"/images/calorielabprev.png"} projectIcon={"/images/calorielablogoprev.png"}/>
+              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/calorielab"} projectImage={"/images/home/projects/calorielabprev.png"} projectIcon={"/images/home/projects/calorielablogoprev.png"}/>
+              <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/westpoint"} projectImage={"/images/home/projects/westpointprev.png"} projectIcon={"/images/home/projects/westpointlogoprev.svg"}/>
             </ProjectDesignContainer>
           </ProjectCatContainer>
        
@@ -475,9 +477,9 @@ export default function Home() {
           <ProjectCatContainer>
             <CatHeading color={themes[theme].text}>Graphic Design</CatHeading>
             <ProjectDesignContainer>
-              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design/"} projectImage={"/images/promsprev.png"} projectIcon={"/images/illusicon.png"} />
-              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/dysonprev.png"} projectIcon={"/images/illusicon.png"} />
-              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/thenaprev.png"} projectIcon={"/images/photoshopicon.png"} />
+              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design/"} projectImage={"/images/home/projects/promsprev.png"} projectIcon={"/images/home/skills/illusicon.svg"} />
+              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/home/projects/dysonprev.png"} projectIcon={"/images/home/skills/illusicon.svg"} />
+              <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/home/projects/thenaprev.png"} projectIcon={"/images/home/skills/photoshopicon.svg"} />
             </ProjectDesignContainer>
           </ProjectCatContainer>
         </DesignProjectRow>

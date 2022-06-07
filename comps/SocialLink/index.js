@@ -8,6 +8,7 @@ const Container = styled.div`
     align-items: center;
     padding: 5px;
     cursor: pointer;
+    z-index: 3;
 `
 
 const Icon = styled.img`
@@ -17,7 +18,7 @@ const Icon = styled.img`
 const SocialLink =({
     //props
     onButtonClick=()=>{},
-    icon='/images/githubIcon.png',
+    icon='/images/icons/githubIcon.svg',
 }) => {
 
     const {theme} = useTheme()
