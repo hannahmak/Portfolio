@@ -25,6 +25,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   cursor: default;
+  overflow-x: hidden;
   margin-bottom: 8vh;
 `
 
