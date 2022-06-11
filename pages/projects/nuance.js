@@ -121,6 +121,7 @@ const ProjectInfoDescription = styled.p`
 const ProjectLinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  z-index: 0;
   @media only screen and (max-width: 600px) {
     margin-bottom: 10%;
   }

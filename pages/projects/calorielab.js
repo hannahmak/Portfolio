@@ -38,8 +38,10 @@ const NavigationContainer = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-left: 6%;
+  margin-right: 6%;
   margin-top: 14vh;
 `
 
@@ -52,6 +54,7 @@ const ProjectTitle = styled.h1`
 
 const ProjectContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 `
 
@@ -63,19 +66,20 @@ const ProjectInfoContainer = styled.div`
 const SoftwareContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 100px;
 `
 
 const InfoHeader = styled.h1`
-  margin-top: 90px;
-  margin-bottom: 72px;
-  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 20px;
   line-height: 29px;
   color: ${props=>props.color};
 `
 
 const InfoSubHeader = styled.p`
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
   color: ${props=>props.color};
   margin-bottom: 20px;
@@ -84,10 +88,14 @@ const InfoSubHeader = styled.p`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 `
 
 const InfoImage =  styled.img``
+
+const MockContainer = styled.div`
+
+`
 
 const MockImgCont = styled.div`
   display: flex;
@@ -115,7 +123,6 @@ export default function CalorieLab() {
       </NavigationContainer>
 
       <ContentContainer>
-
         <ProjectTitle color={themes[theme].text}>CalorieLab</ProjectTitle>
 
         {/* Summary */}
@@ -130,6 +137,7 @@ export default function CalorieLab() {
 
           {/* Style Guide */}
           <ProjectInfoContainer>
+            <InfoHeader color={themes[theme].text}>Style Guide</InfoHeader>
             <InfoSubHeader color={themes[theme].text}>Color Palette</InfoSubHeader>
             <InfoContainer>
               <ColorIcon />

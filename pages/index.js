@@ -52,7 +52,7 @@ const ContentContainer = styled.div`
     background-color: ${props=>props.smallBox};
     margin-left: 0px;
     margin-right 0px;
-    margin-top: 10vh;
+    margin-top: 0vh;
   }
 `
 
@@ -69,9 +69,6 @@ const JobTitle = styled.h2`
   font-size: 24px;
   color: ${props=>props.color};
   margin-bottom: 24px;
-  @media only screen and (max-width: 600px) {
-    font-size: 14px;
-  }
 `
 
 const Title = styled.h1`
@@ -80,8 +77,9 @@ const Title = styled.h1`
   color: ${props=>props.color};
   margin: 0;
   margin-bottom: 24px;
+  white-space: nowrap;
   @media only screen and (max-width: 1200px) {
-    font-size: 44px;
+    font-size: 54px;
     width: 300px;
   }
 `
@@ -91,13 +89,12 @@ const Caption = styled.p`
   color: ${props=>props.color};
   opacity: 67%;
   margin-bottom: 54px;
-
   @media only screen and (max-width: 1200px) {
-    font-size: 14px;
+    font-size: 18px;
     width: 200px;
   }
   @media only screen and (max-width: 600px) {
-    font-size: 14px;
+    font-size: 18px;
     width: 200px;
     margin-bottom: -40px;
   }
@@ -113,19 +110,12 @@ const LeftContainer = styled.div`
 
 const Avatar = styled.img`
   z-index: 1;
-  width: 105%;
+  width: 700px;
 
-  @media only screen and (max-width: 1366px) {
-    width: 135%;
+  @media only screen and (max-width: 1200px) {
+    width: 600px;
   }
 
-  @media only screen and (max-width: 922px) {
-    width: 160%;
-  }
-
-  @media only screen and (max-width: 822px) {
-    width: 300%;
-  }
   @media only screen and (max-width: 600px) {
     display: none;
   }
@@ -133,9 +123,8 @@ const Avatar = styled.img`
 
 const AvatarSmall = styled.img`
   @media only screen and (max-width: 600px) {
-    width: 300%;
     margin-top: 200px;
-    margin-left: -200px;
+    margin-left: -100px;
   }
   @media only screen and (min-width: 600px) {
     display: none;

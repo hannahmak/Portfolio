@@ -12,19 +12,14 @@ const Container = styled.div`
     background-color: #FFCF87;
     cursor: pointer;
     margin-top: 14vh;
-    @media only screen and (max-width : 600px){
-        width: 120px;
-        height: 43px;
-    }
+
 `
 
 const Text = styled.p`
     font-size: 18px;
     font-family: boldtext;
     color: ${props=>props.color};
-    @media only screen and (max-width : 600px){
-        font-size: 14px;
-    }
+
 `
 
 const Button =({

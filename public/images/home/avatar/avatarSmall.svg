@@ -1,7 +1,7 @@
-<svg width="403" height="708" viewBox="0 0 403 708" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="500" height="708" viewBox="0 0 500 708" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <circle cx="274.19" cy="122.19" r="122.19" fill="#FFE6B5"/>
 <circle opacity="0.9" cx="313" cy="354" r="187" fill="#FFCF87"/>
-<rect x="214.504" y="242.229" width="174.751" height="222.808" fill="url(#pattern0)"/>
+<rect x="226" y="243" width="174.751" height="222.808" fill="url(#pattern0)"/>
 <circle opacity="0.8" cx="151" cy="557" r="151" fill="#FFF6E0"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
