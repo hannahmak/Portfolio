@@ -190,8 +190,8 @@ export default function Nuance() {
   return (
     <Container>
       <Head>
-        <title>Nuance - Hannah</title>
-        <meta property="og:title" content="Nuance Lab - Hannah" key="title"/>
+        <title>Nuance - Development</title>
+        <meta property="og:title" content="Nuance - Development" key="title"/>
       </Head>
       <ProjectSumBg bg={themes[theme].boxColor}>
         <NavigationContainer>

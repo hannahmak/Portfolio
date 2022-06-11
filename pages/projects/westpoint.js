@@ -172,8 +172,8 @@ export default function Westpoint() {
   return (
     <Container>
       <Head>
-        <title>Westpoint - Hannah</title>
-        <meta property="og:title" content="Wespoint - Hannah" key="title"/>
+        <title>Westpoint - UI</title>
+        <meta property="og:title" content="Wespoint - UI" key="title"/>
       </Head>
       <ProjectSumBg bg={themes[theme].boxColor}>
         <NavigationContainer>

@@ -106,8 +106,8 @@ export default function CalorieLab() {
   return (
     <Container>
       <Head>
-        <title>Calorie Lab - Hannah</title>
-        <meta property="og:title" content="Calorie Lab - Hannah" key="title"/>
+        <title>Calorie Lab - UI</title>
+        <meta property="og:title" content="Calorie Lab - UI" key="title"/>
       </Head>
 
       <NavigationContainer>

@@ -340,7 +340,9 @@ export default function Home() {
     <Container>
       <Head>
         <title>Hannah&apos;s Portfolio</title>
-        <meta property="og:title" content="Wespoint - Hannah" key="title"/>
+        <meta name="description" content="Frontend developer Hannah MacPherson's portfolio" />
+        <meta property="og:title" content="Hannah's Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <NavigationContainer>

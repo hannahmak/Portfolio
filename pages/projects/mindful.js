@@ -186,8 +186,8 @@ export default function Mindful() {
   return (
     <Container>
       <Head>
-        <title>Mindful - Hannah</title>
-        <meta property="og:title" content="Mindful - Hannah" key="title"/>
+        <title>Mindful - Development</title>
+        <meta property="og:title" content="Mindful - Development" key="title"/>
       </Head>
       <ProjectSumBg bg={themes[theme].boxColor}>
         <NavigationContainer>
