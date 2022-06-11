@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
 import { device } from "../../utils/device";
@@ -41,6 +42,11 @@ export default function Design() {
 
   return (
     <Container>
+      <Head>
+        <title>Design - Hannah</title>
+        <meta property="og:title" content="Design - Hannah" key="title"/>
+      </Head>
+
       <NavigationContainer>
         <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
       </NavigationContainer>

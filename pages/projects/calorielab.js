@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
 import { device } from "../../utils/device";
@@ -104,6 +105,11 @@ export default function CalorieLab() {
 
   return (
     <Container>
+      <Head>
+        <title>Calorie Lab - Hannah</title>
+        <meta property="og:title" content="Calorie Lab - Hannah" key="title"/>
+      </Head>
+
       <NavigationContainer>
         <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
       </NavigationContainer>

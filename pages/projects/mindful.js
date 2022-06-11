@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
 import { device } from "../../utils/device";
@@ -184,6 +185,10 @@ export default function Mindful() {
 
   return (
     <Container>
+      <Head>
+        <title>Mindful - Hannah</title>
+        <meta property="og:title" content="Mindful - Hannah" key="title"/>
+      </Head>
       <ProjectSumBg bg={themes[theme].boxColor}>
         <NavigationContainer>
           <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>

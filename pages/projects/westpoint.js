@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
 import { device } from "../../utils/device";
@@ -170,6 +171,10 @@ export default function Westpoint() {
 
   return (
     <Container>
+      <Head>
+        <title>Westpoint - Hannah</title>
+        <meta property="og:title" content="Wespoint - Hannah" key="title"/>
+      </Head>
       <ProjectSumBg bg={themes[theme].boxColor}>
         <NavigationContainer>
           <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
