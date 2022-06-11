@@ -338,10 +338,6 @@ export default function Home() {
 
   return (
     <Container>
-      <Head>
-        <title>Hannah MacPherson - Portfolio</title>
-        <meta property="og:title" content="Hannah MacPherson - Portfolio" key="title"/>
-      </Head>
       <NavigationContainer>
         <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
       </NavigationContainer>
@@ -371,6 +367,10 @@ export default function Home() {
       </ContentContainer>
 
       <Tag id="about" />
+      <Head>
+        <title>About - Hannah</title>
+        <meta property="og:title" content="Hannah MacPherson - Portfolio" key="title"/>
+      </Head>
 
       {/* About Page */}
       <ContentContainerAbout smallBox={themes[theme].body} boxColor={themes[theme].boxColor}>
