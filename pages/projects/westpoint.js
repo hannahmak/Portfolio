@@ -66,26 +66,7 @@ export default function Westpoint() {
       </ProjectSumBg>
 
       <ProjectDemo>
-        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock1.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock2.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock3.png" /> 
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock4.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock5.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock6.png" />
-          </MockImgCont>
-        </Carousel>
+
         <UXContainer>
           <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
         </UXContainer>
