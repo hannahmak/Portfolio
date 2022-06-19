@@ -3,17 +3,96 @@ import styled from 'styled-components'
 import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
-import { device } from "../../utils/device";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Mousewheel, Keyboard } from "swiper"
+import "swiper/css"
+import "swiper/css/navigation"
 
 // components
-import Navigation from '../../comps/Navigation'
+import NavigationBar from '../../comps/NavigationBar'
 import Button from '../../comps/Button'
-import DarkMode from '../../comps/DarkMode'
 import SocialLink from '../../comps/SocialLink'
-import ScrollIcon from '../../comps/ScrollIcon'
-import ProjectCard from '../../comps/ProjectCard'
-import SkillIcon from '../../comps/SkillIcon'
-import { Carousel } from '@trendyol-js/react-carousel'
+
+export default function Westpoint() {
+
+  const {theme, setTheme} = useTheme()
+
+  return (
+    <Container>
+      <Head>
+        <title>Westpoint - UI</title>
+        <meta property="og:title" content="Wespoint - UI" key="title"/>
+      </Head>
+      <ProjectSumBg bg={themes[theme].boxColor}>
+        <NavigationContainer>
+          <NavigationBar onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
+        </NavigationContainer>
+
+        <ProjectSumContainer>
+          <ProjectLogo src='/images/westpointprologo.svg'/>
+          <ProjectLogoSmall src='/images/westSmall.svg'/>
+          <ProjectDescContainer>
+            <ProjectDesc color={themes[theme].text}>
+              Westpoint Hotel is a luxury Cariabean hotel wordpress website.
+            </ProjectDesc>
+            
+            <ProjectInfoContainer color={themes[theme].text}>
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Role</ProjectInfoHeading>
+                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
+                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
+                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Team</ProjectInfoHeading>
+                <ProjectInfoDescription>4 Members</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Time</ProjectInfoHeading>
+                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+            </ProjectInfoContainer>
+
+            <ProjectLinksContainer>
+              <ProjectLinkIndvContainer>
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open('http://www.hannahmakayla.com/westpoint')}} />
+                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
+              </ProjectLinkIndvContainer>
+            </ProjectLinksContainer>
+          </ProjectDescContainer>
+        </ProjectSumContainer>
+      </ProjectSumBg>
+
+      <ProjectDemo>
+        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock1.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock2.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock3.png" /> 
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock4.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock5.png" />
+          </MockImgCont>
+          <MockImgCont>
+            <MockImg src="/images/minfulmock6.png" />
+          </MockImgCont>
+        </Carousel>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemo>
+    </Container>
+  )
+}
 
 // global styles
 const Container = styled.div`
@@ -164,84 +243,3 @@ const UXContainer = styled.div`
     margin-top: 50px;
   }
 `
-
-export default function Westpoint() {
-
-  const {theme, setTheme} = useTheme()
-
-  return (
-    <Container>
-      <Head>
-        <title>Westpoint - UI</title>
-        <meta property="og:title" content="Wespoint - UI" key="title"/>
-      </Head>
-      <ProjectSumBg bg={themes[theme].boxColor}>
-        <NavigationContainer>
-          <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
-        </NavigationContainer>
-
-        <ProjectSumContainer>
-          <ProjectLogo src='/images/westpointprologo.svg'/>
-          <ProjectLogoSmall src='/images/westSmall.svg'/>
-          <ProjectDescContainer>
-            <ProjectDesc color={themes[theme].text}>
-              Westpoint Hotel is a luxury Cariabean hotel wordpress website.
-            </ProjectDesc>
-            
-            <ProjectInfoContainer color={themes[theme].text}>
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Role</ProjectInfoHeading>
-                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
-                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
-                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Team</ProjectInfoHeading>
-                <ProjectInfoDescription>4 Members</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Time</ProjectInfoHeading>
-                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-            </ProjectInfoContainer>
-
-            <ProjectLinksContainer>
-              <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open('http://www.hannahmakayla.com/westpoint')}} />
-                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
-              </ProjectLinkIndvContainer>
-            </ProjectLinksContainer>
-          </ProjectDescContainer>
-        </ProjectSumContainer>
-      </ProjectSumBg>
-
-      <ProjectDemo>
-        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock1.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock2.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock3.png" /> 
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock4.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock5.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/minfulmock6.png" />
-          </MockImgCont>
-        </Carousel>
-        <UXContainer>
-          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemo>
-    </Container>
-  )
-}

@@ -4,16 +4,145 @@ import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
 import { device } from "../../utils/device";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Mousewheel, Keyboard } from "swiper"
+import "swiper/css"
+import "swiper/css/navigation"
 
 // components
-import Navigation from '../../comps/Navigation'
+import NavigationBar from '../../comps/NavigationBar'
 import Button from '../../comps/Button'
-import DarkMode from '../../comps/DarkMode'
 import SocialLink from '../../comps/SocialLink'
-import ScrollIcon from '../../comps/ScrollIcon'
-import ProjectCard from '../../comps/ProjectCard'
-import SkillIcon from '../../comps/SkillIcon'
-import { Carousel } from '@trendyol-js/react-carousel'
+
+export default function Nuance() {
+
+  const {theme, setTheme} = useTheme()
+
+  return (
+    <Container>
+      <Head>
+        <title>Nuance - Development</title>
+        <meta property="og:title" content="Nuance - Development" key="title"/>
+      </Head>
+      <ProjectSumBg bg={themes[theme].boxColor}>
+        <NavigationContainer>
+          <NavigationBar onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
+        </NavigationContainer>
+
+        <ProjectSumContainer>
+          <ProjectLogo src='/images/projects/nuance/nuanceprologo.svg'/>
+
+          <ProjectLogoSmall src='/images/projects/nuance/nuanceSmall.svg'/>
+          <ProjectDescContainer>
+
+
+            <ProjectDesc color={themes[theme].text}>
+              Nuance is an educational app related to cultural awareness and understanding. The goal of Nuance is to challenge users to question their thinking about important topics. Nuance presents all sides of an idea, free from the labels of partisanship and biases.
+            </ProjectDesc>
+            
+            <ProjectInfoContainer color={themes[theme].text}>
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Role</ProjectInfoHeading>
+                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
+                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
+                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Team</ProjectInfoHeading>
+                <ProjectInfoDescription>4 Members</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Time</ProjectInfoHeading>
+                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+            </ProjectInfoContainer>
+
+            <ProjectLinksContainer>
+              <ProjectLinkIndvContainer>
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open(' https://hosted-nuance-oo0zozfdx-hannahmak.vercel.app')}} />
+                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
+              </ProjectLinkIndvContainer>
+             
+              <ProjectLinkIndvContainer>
+                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={()=>{window.open('https://github.com/hannahmak/Nuance')}} />
+                <ProjectLinkDesc color={themes[theme].text}>Github</ProjectLinkDesc>
+              </ProjectLinkIndvContainer>
+
+            </ProjectLinksContainer>
+          </ProjectDescContainer>
+        </ProjectSumContainer>
+      </ProjectSumBg>
+
+      <ProjectDemo>
+      <Swiper cssMode={true}
+                  navigation={true}
+                  mousewheel={true}
+                  keyboard={true}
+                  slidesPerView={3} 
+                  spaceBetween={3} 
+                  modules={[Navigation, Mousewheel, Keyboard]} 
+                  className="mySwiper">
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock1.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock2.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock3.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock4.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock5.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock6.png" />
+          </SwiperSlide>
+        </Swiper>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemo>
+
+      <ProjectDemoSmall>
+      <Swiper cssMode={true}
+                  navigation={true}
+                  mousewheel={true}
+                  keyboard={true}
+                  slidesPerView={1} 
+                  spaceBetween={3} 
+                  modules={[Navigation, Mousewheel, Keyboard]} 
+                  className="mySwiper">
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock1.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock2.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock3.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock4.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock5.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/nuance/nuancemock6.png" />
+          </SwiperSlide>
+        </Swiper>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemoSmall>
+    </Container>
+  )
+}
 
 // global styles
 const Container = styled.div`
@@ -163,11 +292,6 @@ const ProjectDemoSmall = styled.div`
   }
 `
 
-const MockImgCont = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 const MockImg = styled.img`
   height: 50vw;
   @media only screen and (max-width: 600px) {
@@ -176,129 +300,8 @@ const MockImg = styled.img`
 `
 
 const UXContainer = styled.div`
-  margin-top: 253px;
   margin-bottom: 100px;
   @media only screen and (max-width: 600px) {
     margin-top: 50px;
   }
-  
 `
-
-export default function Nuance() {
-
-  const {theme, setTheme} = useTheme()
-
-  return (
-    <Container>
-      <Head>
-        <title>Nuance - Development</title>
-        <meta property="og:title" content="Nuance - Development" key="title"/>
-      </Head>
-      <ProjectSumBg bg={themes[theme].boxColor}>
-        <NavigationContainer>
-          <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
-        </NavigationContainer>
-
-        <ProjectSumContainer>
-          <ProjectLogo src='/images/projects/nuance/nuanceprologo.svg'/>
-
-          <ProjectLogoSmall src='/images/projects/nuance/nuanceSmall.svg'/>
-          <ProjectDescContainer>
-
-
-            <ProjectDesc color={themes[theme].text}>
-              Nuance is an educational app related to cultural awareness and understanding. The goal of Nuance is to challenge users to question their thinking about important topics. Nuance presents all sides of an idea, free from the labels of partisanship and biases.
-            </ProjectDesc>
-            
-            <ProjectInfoContainer color={themes[theme].text}>
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Role</ProjectInfoHeading>
-                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
-                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
-                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Team</ProjectInfoHeading>
-                <ProjectInfoDescription>4 Members</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Time</ProjectInfoHeading>
-                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-            </ProjectInfoContainer>
-
-            <ProjectLinksContainer>
-              <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open(' https://hosted-nuacne-oo0zozfdx-hannahmak.vercel.app')}} />
-                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
-              </ProjectLinkIndvContainer>
-             
-              <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={()=>{window.open('https://github.com/hannahmak/Nuance')}} />
-                <ProjectLinkDesc color={themes[theme].text}>Github</ProjectLinkDesc>
-              </ProjectLinkIndvContainer>
-
-            </ProjectLinksContainer>
-          </ProjectDescContainer>
-        </ProjectSumContainer>
-      </ProjectSumBg>
-
-      <ProjectDemo>
-        <Carousel show={3} slide={1} transition={0.5} swiping={true}>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock1.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock2.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock3.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock4.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock5.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock6.png" />
-          </MockImgCont>
-        </Carousel>
-        <UXContainer>
-          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemo>
-
-      <ProjectDemoSmall>
-        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock1.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock2.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock3.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock4.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock5.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/nuance/nuancemock6.png" />
-          </MockImgCont>
-        </Carousel>
-        <UXContainer>
-          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemoSmall>
-
-
- 
-    </Container>
-  )
-}

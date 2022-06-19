@@ -6,14 +6,36 @@ import {themes} from "../../utils/variable"
 import { device } from "../../utils/device";
 
 // components
-import Navigation from '../../comps/Navigation'
+import NavigationBar from '../../comps/NavigationBar'
 import DesignCard from '../../comps/DesignCard'
-import Button from '../../comps/Button'
-import DarkMode from '../../comps/DarkMode'
-import SocialLink from '../../comps/SocialLink'
-import ScrollIcon from '../../comps/ScrollIcon'
-import ProjectCard from '../../comps/ProjectCard'
-import SkillIcon from '../../comps/SkillIcon'
+
+export default function Design() {
+
+  const {theme, setTheme} = useTheme()
+
+  return (
+    <Container>
+      <Head>
+        <title>Design - Hannah</title>
+        <meta property="og:title" content="Design - Hannah" key="title"/>
+      </Head>
+
+      <NavigationContainer>
+        <NavigationBar onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
+      </NavigationContainer>
+
+      <ContentContainer  id="thena">
+        <DesignCard text={"Thena Painting"} icon={"/images/projects/design/photoshopicon.svg"}/>
+      </ContentContainer>
+      <ContentContainer  id="dyson">
+        <DesignCard projectImage={"/images/projects/design/dysonwork.png"} text={"Dyson Corale Technical Drawing"} icon={"/images/illusicon.svg"}/>
+      </ContentContainer>
+      <ContentContainer  id="proms">
+        <DesignCard projectImage={"/images/projects/design/posterwork.png"} text={"The Proms Poster"} icon={"/images/illusicon.svg"}/>
+      </ContentContainer>
+    </Container>
+  )
+}
 
 // global styles
 const Container = styled.div`
@@ -35,32 +57,3 @@ const ContentContainer = styled.div`
     margin-left: 6%;
     margin-top: 14vh;
 `
-
-export default function Design() {
-
-  const {theme, setTheme} = useTheme()
-
-  return (
-    <Container>
-      <Head>
-        <title>Design - Hannah</title>
-        <meta property="og:title" content="Design - Hannah" key="title"/>
-      </Head>
-
-      <NavigationContainer>
-        <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
-      </NavigationContainer>
-
-      <ContentContainer  id="thena">
-        <DesignCard text={"Thena Painting"} icon={"/images/projects/design/photoshopicon.svg"}/>
-      </ContentContainer>
-      <ContentContainer  id="dyson">
-        <DesignCard projectImage={"/images/projects/design/dysonwork.png"} text={"Dyson Corale Technical Drawing"} icon={"/images/illusicon.svg"}/>
-      </ContentContainer>
-      <ContentContainer  id="proms">
-        <DesignCard projectImage={"/images/projects/design/posterwork.png"} text={"The Proms Poster"} icon={"/images/illusicon.svg"}/>
-      </ContentContainer>
- 
-    </Container>
-  )
-}

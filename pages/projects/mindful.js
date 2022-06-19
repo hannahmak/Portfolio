@@ -3,17 +3,142 @@ import styled from 'styled-components'
 import Head from 'next/head'
 import {useTheme} from '../../utils/provider'
 import {themes} from "../../utils/variable"
-import { device } from "../../utils/device";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Mousewheel, Keyboard } from "swiper"
+import "swiper/css"
+import "swiper/css/navigation"
 
 // components
-import Navigation from '../../comps/Navigation'
+import NavigationBar from '../../comps/NavigationBar'
 import Button from '../../comps/Button'
-import DarkMode from '../../comps/DarkMode'
 import SocialLink from '../../comps/SocialLink'
-import ScrollIcon from '../../comps/ScrollIcon'
-import ProjectCard from '../../comps/ProjectCard'
-import SkillIcon from '../../comps/SkillIcon'
-import { Carousel } from '@trendyol-js/react-carousel'
+
+export default function Mindful() {
+
+  const {theme, setTheme} = useTheme()
+
+  return (
+    <Container>
+      <Head>
+        <title>Mindful - Development</title>
+        <meta property="og:title" content="Mindful - Development" key="title"/>
+      </Head>
+      <ProjectSumBg bg={themes[theme].boxColor}>
+        <NavigationContainer>
+          <NavigationBar onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
+        </NavigationContainer>
+
+        <ProjectSumContainer>
+          <ProjectLogo src='/images/projects/mindful/mindfulprologo.svg'/>
+          <ProjectLogoSmall src='/images/projects/mindful/mindfulSmall.svg'/>
+          <ProjectDescContainer>
+            <ProjectDesc color={themes[theme].text}>
+            Mindful is an application that tries to encourages users to take a moment out of their day to practice mindful reflections, whether that be how they feel, what they did that day, or just talk in general. It gives an opportunity for users to have an open platform where they can share their emotions with close friends or just themselves.
+            </ProjectDesc>
+            
+            <ProjectInfoContainer color={themes[theme].text}>
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Role</ProjectInfoHeading>
+                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
+                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
+                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Team</ProjectInfoHeading>
+                <ProjectInfoDescription>6 Members</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+
+              <ProjectInfoIndvContainer>
+                <ProjectInfoHeading>Time</ProjectInfoHeading>
+                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
+              </ProjectInfoIndvContainer>
+            </ProjectInfoContainer>
+
+            <ProjectLinksContainer>
+              <ProjectLinkIndvContainer>
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open('https://idsp3380-client.herokuapp.com')}} />
+                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
+              </ProjectLinkIndvContainer>
+             
+              <ProjectLinkIndvContainer>
+                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={()=>{window.open('https://github.com/hannahmak/mindful-frontend')}} />
+                <ProjectLinkDesc color={themes[theme].text}>Github</ProjectLinkDesc>
+              </ProjectLinkIndvContainer>
+
+            </ProjectLinksContainer>
+          </ProjectDescContainer>
+        </ProjectSumContainer>
+      </ProjectSumBg>
+
+      <ProjectDemo>
+      <Swiper cssMode={true}
+                  navigation={true}
+                  mousewheel={true}
+                  keyboard={true}
+                  slidesPerView={1} 
+                  spaceBetween={3} 
+                  modules={[Navigation, Mousewheel, Keyboard]} 
+                  className="mySwiper">
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock1.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock2.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock3.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock4.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock5.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock6.png" />
+          </SwiperSlide>
+        </Swiper>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemo>
+
+      <ProjectDemoSmall>
+      <Swiper cssMode={true}
+                  navigation={true}
+                  mousewheel={true}
+                  keyboard={true}
+                  slidesPerView={1} 
+                  spaceBetween={1} 
+                  modules={[Navigation, Mousewheel, Keyboard]} 
+                  className="mySwiper">
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock1.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock2.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock3.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock4.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock5.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MockImg src="/images/projects/mindful/minfulmock6.png" />
+          </SwiperSlide>
+        </Swiper>
+        <UXContainer>
+          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
+        </UXContainer>
+      </ProjectDemoSmall>
+    </Container>
+  )
+}
 
 // global styles
 const Container = styled.div`
@@ -163,132 +288,13 @@ const ProjectDemoSmall = styled.div`
   }
 `
 
-const MockImgCont = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 const MockImg = styled.img`
   height: 45vw;
 `
 
 const UXContainer = styled.div`
-  margin-top: 253px;
   margin-bottom: 100px;
   @media only screen and (max-width: 600px) {
     margin-top: 50px;
   }
 `
-
-export default function Mindful() {
-
-  const {theme, setTheme} = useTheme()
-
-  return (
-    <Container>
-      <Head>
-        <title>Mindful - Development</title>
-        <meta property="og:title" content="Mindful - Development" key="title"/>
-      </Head>
-      <ProjectSumBg bg={themes[theme].boxColor}>
-        <NavigationContainer>
-          <Navigation onSwitchClick={()=>setTheme(theme === 'darkMode' ? 'default' : 'darkMode') }/>
-        </NavigationContainer>
-
-        <ProjectSumContainer>
-          <ProjectLogo src='/images/projects/mindful/mindfulprologo.svg'/>
-          <ProjectLogoSmall src='/images/projects/mindful/mindfulSmall.svg'/>
-          <ProjectDescContainer>
-            <ProjectDesc color={themes[theme].text}>
-            Mindful is an application that tries to encourages users to take a moment out of their day to practice mindful reflections, whether that be how they feel, what they did that day, or just talk in general. It gives an opportunity for users to have an open platform where they can share their emotions with close friends or just themselves.
-            </ProjectDesc>
-            
-            <ProjectInfoContainer color={themes[theme].text}>
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Role</ProjectInfoHeading>
-                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
-                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
-                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Team</ProjectInfoHeading>
-                <ProjectInfoDescription>6 Members</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Time</ProjectInfoHeading>
-                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-            </ProjectInfoContainer>
-
-            <ProjectLinksContainer>
-              <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open('https://idsp3380-client.herokuapp.com')}} />
-                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
-              </ProjectLinkIndvContainer>
-             
-              <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={()=>{window.open('https://github.com/hannahmak/mindful-frontend')}} />
-                <ProjectLinkDesc color={themes[theme].text}>Github</ProjectLinkDesc>
-              </ProjectLinkIndvContainer>
-
-            </ProjectLinksContainer>
-          </ProjectDescContainer>
-        </ProjectSumContainer>
-      </ProjectSumBg>
-
-      <ProjectDemo>
-        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock1.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock2.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock3.png" /> 
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock4.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock5.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock6.png" />
-          </MockImgCont>
-        </Carousel>
-        <UXContainer>
-          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemo>
-
-      <ProjectDemoSmall>
-        <Carousel show={1} slide={1} transition={0.5} swiping={true}>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock1.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock2.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock3.png" /> 
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock4.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock5.png" />
-          </MockImgCont>
-          <MockImgCont>
-            <MockImg src="/images/projects/mindful/minfulmock6.png" />
-          </MockImgCont>
-        </Carousel>
-        <UXContainer>
-          <Button onButtonClick={()=>{window.location = 'mailto:hannahmakmac@gmail.com'}} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemoSmall>
-    </Container>
-  )
-}

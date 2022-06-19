@@ -4,7 +4,6 @@ import {themes} from '../../utils/variable'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 
-
 //components
 import DarkMode from '/comps/DarkMode'
 
@@ -47,7 +46,7 @@ const LinkText = styled.a`
 
 `
 
-const Navigation = ({
+const NavigationBar = ({
     //props
 
 }) => {
@@ -74,4 +73,4 @@ const Navigation = ({
 
 } 
 
-export default Navigation
+export default NavigationBar
