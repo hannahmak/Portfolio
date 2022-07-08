@@ -376,6 +376,9 @@ const AvatarSmall = styled.img`
   @media only screen and (min-width: 1250px) {
     display: none;
   }
+  @media only screen and (max-width: 500px) {
+    margin-right: 90%;
+  }
 `
 
 const SocialContainer = styled.div`
