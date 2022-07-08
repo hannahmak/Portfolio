@@ -377,7 +377,8 @@ const AvatarSmall = styled.img`
     display: none;
   }
   @media only screen and (max-width: 500px) {
-    margin-right: 90%;
+    margin-right: 60%;
+    width: 100vw;
   }
 `
 
