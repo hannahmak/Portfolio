@@ -306,6 +306,8 @@ const RightContainer = styled.div`
   }
   @media only screen and (max-width: 500px) {
     margin-left: 20%;
+    justify-content: center;
+    justify-content: center;
   }
   
 `
@@ -315,6 +317,9 @@ const JobTitle = styled.h2`
   font-size: 24px;
   color: ${props=>props.color};
   margin-bottom: 24px;
+  @media only screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `
 
 const Title = styled.h1`
@@ -327,6 +332,9 @@ const Title = styled.h1`
   @media only screen and (max-width: 1250px) {
     font-size: 54px;
     width: 300px;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 34px;
   }
 `
 
@@ -343,6 +351,9 @@ const Caption = styled.p`
     font-size: 18px;
     width: 200px;
     margin-bottom: -40px;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 14px;
   }
 `
 
