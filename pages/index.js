@@ -162,7 +162,7 @@ export default function Home() {
                 navigation={true}
                 mousewheel={true}
                 keyboard={true}
-                slidesPerView={5} 
+                slidesPerView={4} 
                 spaceBetween={-60} 
                 modules={[Navigation, Mousewheel, Keyboard]} 
                 className="mySwiper">
@@ -301,6 +301,13 @@ const RightContainer = styled.div`
   flex-direction: column;
   text-align:left;
   z-index: 2;
+  @media only screen and (max-width: 1250px) {
+    justify-content: center;
+  }
+  @media only screen and (max-width: 500px) {
+    margin-left: 20%;
+  }
+  
 `
 
 const JobTitle = styled.h2`
