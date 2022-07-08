@@ -162,7 +162,7 @@ export default function Home() {
                 navigation={true}
                 mousewheel={true}
                 keyboard={true}
-                slidesPerView={4} 
+                slidesPerView={3} 
                 spaceBetween={-60} 
                 modules={[Navigation, Mousewheel, Keyboard]} 
                 className="mySwiper">
