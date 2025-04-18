@@ -61,7 +61,7 @@ export default function Nuance() {
 
             <ProjectLinksContainer>
               <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open(' https://hosted-nuance-oo0zozfdx-hannahmak.vercel.app')}} />
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={()=>{window.open('https://hosted-nuance-oo0zozfdx-hannahmak.vercel.app')}} />
                 <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
               </ProjectLinkIndvContainer>
              
@@ -170,12 +170,12 @@ const ProjectSumContainer = styled.div`
   flex-direction: row;
   align-items: flex-end;
   margin-left: 6%;
-  margin-right 6%;
+  margin-right: 6%;
   @media only screen and (max-width: 600px) {
     margin-top: 20%;
     flex-direction: column;
     margin-left: 0%;
-    margin-right 0%;
+    margin-right: 0%;
   }
 `
 
@@ -202,7 +202,7 @@ const ProjectDescContainer = styled.div`
   @media only screen and (max-width: 600px) {
     align-items: center;
     margin-left: 3%;
-    margin-right 3%;
+    margin-right: 3%;
   }
 `
 
@@ -212,7 +212,7 @@ const ProjectDesc = styled.p`
   color: ${props=>props.color};
   @media only screen and (max-width: 600px) {
     justify-content: center;
-    text-align: center
+    text-align: center;
   }
 `
 

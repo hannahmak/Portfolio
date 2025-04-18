@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import { useTheme } from '../../utils/provider';
 import { themes } from "../../utils/variable";
+import { device } from "../../utils/device";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel, Keyboard } from "swiper";
 import "swiper/css";
@@ -13,15 +14,15 @@ import NavigationBar from '../../comps/NavigationBar';
 import Button from '../../comps/Button';
 import SocialLink from '../../comps/SocialLink';
 
-export default function Mindful() {
+export default function Nuance() {
 
   const { theme, setTheme } = useTheme();
 
   return (
     <Container>
       <Head>
-        <title>Mindful - Development</title>
-        <meta property="og:title" content="Mindful - Development" key="title" />
+        <title>EVAI</title>
+        <meta property="og:title" content="EVAI" key="title" />
       </Head>
       <ProjectSumBg bg={themes[theme].boxColor}>
         <NavigationContainer>
@@ -29,40 +30,36 @@ export default function Mindful() {
         </NavigationContainer>
 
         <ProjectSumContainer>
-          <ProjectLogo src='/images/projects/mindful/mindfulprologo.svg' />
-          <ProjectLogoSmall src='/images/projects/mindful/mindfulSmall.svg' />
+          <ProjectLogo src='/images/projects/evai/evailogo.png' />
+
+          <ProjectLogoSmall src='/images/projects/evai/evailogoSmall.png' />
           <ProjectDescContainer>
+
+
             <ProjectDesc color={themes[theme].text}>
-              Mindful is an application that tries to encourages users to take a moment out of their day to practice mindful reflections, whether that be how they feel, what they did that day, or just talk in general. It gives an opportunity for users to have an open platform where they can share their emotions with close friends or just themselves.
+              EVAI is the smart AI-powered operating system for EV chargers, turnkey EV installers, and network operators. Our hardware-agnostic platform lets you seamlessly launch, optimize, and scale your EV charging business, providing a comprehensive solution for high-demand environments.
             </ProjectDesc>
 
             <ProjectInfoContainer color={themes[theme].text}>
               <ProjectInfoIndvContainer>
                 <ProjectInfoHeading>Role</ProjectInfoHeading>
-                <ProjectInfoDescription>Lead Frontend Dev</ProjectInfoDescription>
-                <ProjectInfoDescription>UI Design</ProjectInfoDescription>
-                <ProjectInfoDescription>UX Research</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Team</ProjectInfoHeading>
-                <ProjectInfoDescription>6 Members</ProjectInfoDescription>
-              </ProjectInfoIndvContainer>
-
-              <ProjectInfoIndvContainer>
-                <ProjectInfoHeading>Time</ProjectInfoHeading>
-                <ProjectInfoDescription>4 Months</ProjectInfoDescription>
+                <ProjectInfoDescription>I engineered high-performance, responsive UI components using React and Next.js. I also contributed to backend development by integrating RESTful APIs, implementing server-side logic in Node.js, and ensuring efficient, secure data flow between client and server. My work emphasized scalability, real-time responsiveness, and seamless user interaction, all critical to supporting a dynamic, multi-user platform.</ProjectInfoDescription>
               </ProjectInfoIndvContainer>
             </ProjectInfoContainer>
 
             <ProjectLinksContainer>
               <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].demoIcon} onButtonClick={() => { window.open('https://idsp3380-client.herokuapp.com'); }} />
-                <ProjectLinkDesc color={themes[theme].text}>Visit</ProjectLinkDesc>
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={() => { window.open('https://demo.evai.ca'); }} />
+                <ProjectLinkDesc color={themes[theme].text}>Demo Site</ProjectLinkDesc>
               </ProjectLinkIndvContainer>
 
               <ProjectLinkIndvContainer>
-                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={() => { window.open('https://github.com/hannahmak/mindful-frontend'); }} />
+                <SocialLink icon={themes[theme].demoIcon} onButtonClick={() => { window.open('https://dev.evai.ca'); }} />
+                <ProjectLinkDesc color={themes[theme].text}>Dev Site</ProjectLinkDesc>
+              </ProjectLinkIndvContainer>
+
+              <ProjectLinkIndvContainer>
+                <SocialLink icon={themes[theme].socialIconGit} onButtonClick={() => { window.open('https://github.com/HenryBcit/roughlyev'); }} />
                 <ProjectLinkDesc color={themes[theme].text}>Github</ProjectLinkDesc>
               </ProjectLinkIndvContainer>
 
@@ -72,68 +69,24 @@ export default function Mindful() {
       </ProjectSumBg>
 
       <ProjectDemo>
-        <Swiper cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          keyboard={true}
-          slidesPerView={1}
-          spaceBetween={3}
-          modules={[Navigation, Mousewheel, Keyboard]}
-          className="mySwiper">
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock1.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock2.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock3.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock4.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock5.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock6.png" />
-          </SwiperSlide>
-        </Swiper>
+        <ProjectInfoHeading>Technologies Used</ProjectInfoHeading>
+        <ProjectInfoDescription>  •	Frontend: React, Next.js, TypeScript, Styled-Components
+          •	Backend: Node.js, RESTful APIs
+          •	Payment Integration: Stripe
+          •	Others: Git, Vercel (deployment), AWS (cloud infrastructure)
+          •	Tooling: Webpack, Babel, Docker for containerization</ProjectInfoDescription>
+        <ProjectInfoHeading>Challenges and Solution</ProjectInfoHeading>
+        <ProjectInfoDescription>I optimized the platform for real-time data flow and performance, focusing on scalability to support multiple charger types and handle high-traffic usage.</ProjectInfoDescription>
+        <ProjectInfoHeading>Outcome</ProjectInfoHeading>
+        <ProjectInfoDescription>EVAI facilitates efficient multi-location EV management, offering customizable pricing, secure user access, and detailed reporting, all while enhancing user engagement and simplifying management.</ProjectInfoDescription>
         <UXContainer>
-          <Button onButtonClick={() => { window.location = 'mailto:hannahmakmac@gmail.com'; }} text="View UI/UX" />
+          <Button onButtonClick={() => { window.location = 'https://evai.ca'; }} text="Learn More" />
         </UXContainer>
       </ProjectDemo>
 
       <ProjectDemoSmall>
-        <Swiper cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          keyboard={true}
-          slidesPerView={1}
-          spaceBetween={1}
-          modules={[Navigation, Mousewheel, Keyboard]}
-          className="mySwiper">
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock1.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock2.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock3.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock4.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock5.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock6.png" />
-          </SwiperSlide>
-        </Swiper>
         <UXContainer>
-          <Button onButtonClick={() => { window.location = 'mailto:hannahmakmac@gmail.com'; }} text="View UI/UX" />
+          <Button onButtonClick={() => { window.location = 'https://evai.ca'; }} text="Learn More" />
         </UXContainer>
       </ProjectDemoSmall>
     </Container>
@@ -196,7 +149,7 @@ const ProjectDescContainer = styled.div`
   align-content: flex-end; 
   margin-bottom: 2%;
   @media only screen and (max-width: 600px) {
-    align-items: center;
+    align-items: left;
     margin-left: 3%;
     margin-right: 3%;
   }
@@ -206,10 +159,6 @@ const ProjectDesc = styled.p`
   font-size: 18px;
   line-height: 30px;
   color: ${props => props.color};
-  @media only screen and (max-width: 600px) {
-    justify-content: center;
-    text-align: center
-  }
 `;
 
 const ProjectInfoContainer = styled.div`
@@ -220,14 +169,15 @@ const ProjectInfoContainer = styled.div`
   margin-right: 6%;
   width: 30vw;
   @media only screen and (max-width: 600px) {
-    justify-content: center;
+    justify-content: left;
+    width: 100%;
   }
 `;
 const ProjectInfoIndvContainer = styled.div`
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 600px) {
-    margin: 20%;
+
   }
 `;
 
@@ -271,7 +221,7 @@ const ProjectDemo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 114px;
+  margin-top: 2%;
   @media only screen and (max-width: 600px) {
     display: none;
   }
@@ -289,7 +239,10 @@ const ProjectDemoSmall = styled.div`
 `;
 
 const MockImg = styled.img`
-  height: 45vw;
+  height: 50vw;
+  @media only screen and (max-width: 600px) {
+    height: 100vw;
+  }
 `;
 
 const UXContainer = styled.div`
