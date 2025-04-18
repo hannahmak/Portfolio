@@ -24,10 +24,11 @@ export default function Nuance() {
         <title>EVAI</title>
         <meta property="og:title" content="EVAI" key="title" />
       </Head>
+      <NavigationContainer>
+        <NavigationBar onSwitchClick={() => setTheme(theme === 'darkMode' ? 'default' : 'darkMode')} />
+      </NavigationContainer>
       <ProjectSumBg bg={themes[theme].boxColor}>
-        <NavigationContainer>
-          <NavigationBar onSwitchClick={() => setTheme(theme === 'darkMode' ? 'default' : 'darkMode')} />
-        </NavigationContainer>
+
 
         <ProjectSumContainer>
           <ProjectLogo src='/images/projects/evai/evailogo.png' />
