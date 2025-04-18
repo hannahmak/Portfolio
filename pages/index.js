@@ -5,10 +5,10 @@ import { useTheme } from '../utils/provider';
 import { themes } from "../utils/variable";
 import { device } from "../utils/device";
 import { useRouter } from 'next/router';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Mousewheel, Keyboard } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Mousewheel, Keyboard } from "swiper";
+// import "swiper/css";
+// import "swiper/css/navigation";
 
 // components
 import NavigationBar from '../comps/NavigationBar';
@@ -94,7 +94,7 @@ export default function Home() {
         </SocialContainerAbout>
       </ProfileContainerSmall>
 
-      <SkillsContainer>
+      {/* <SkillsContainer>
         <Swiper cssMode={true}
           navigation={true}
           mousewheel={true}
@@ -176,7 +176,7 @@ export default function Home() {
             <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nodeicon.svg"} />
           </SwiperSlide>
         </Swiper>
-      </SkillsContainerSmall>
+      </SkillsContainerSmall> */}
 
       <Tag id="project" />
 

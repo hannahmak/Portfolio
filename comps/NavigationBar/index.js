@@ -31,7 +31,7 @@ const LinkContainer = styled.div`
     cursor: pointer;
 `
 
-const LinkText = styled.a`
+const LinkText = styled.div`
     font-family: boldtext;
     font-size: 18px;
     text-align: center;
