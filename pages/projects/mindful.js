@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import { useTheme } from '../../utils/provider';
 import { themes } from "../../utils/variable";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Mousewheel, Keyboard } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
 
 // components
 import NavigationBar from '../../comps/NavigationBar';
@@ -70,72 +66,6 @@ export default function Mindful() {
           </ProjectDescContainer>
         </ProjectSumContainer>
       </ProjectSumBg>
-
-      <ProjectDemo>
-        <Swiper cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          keyboard={true}
-          slidesPerView={1}
-          spaceBetween={3}
-          modules={[Navigation, Mousewheel, Keyboard]}
-          className="mySwiper">
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock1.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock2.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock3.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock4.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock5.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock6.png" />
-          </SwiperSlide>
-        </Swiper>
-        <UXContainer>
-          <Button onButtonClick={() => { window.location = 'mailto:hannahmakmac@gmail.com'; }} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemo>
-
-      <ProjectDemoSmall>
-        <Swiper cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          keyboard={true}
-          slidesPerView={1}
-          spaceBetween={1}
-          modules={[Navigation, Mousewheel, Keyboard]}
-          className="mySwiper">
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock1.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock2.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock3.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock4.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock5.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <MockImg src="/images/projects/mindful/minfulmock6.png" />
-          </SwiperSlide>
-        </Swiper>
-        <UXContainer>
-          <Button onButtonClick={() => { window.location = 'mailto:hannahmakmac@gmail.com'; }} text="View UI/UX" />
-        </UXContainer>
-      </ProjectDemoSmall>
     </Container>
   );
 }

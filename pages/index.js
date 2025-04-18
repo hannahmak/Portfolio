@@ -5,10 +5,6 @@ import { useTheme } from '../utils/provider';
 import { themes } from "../utils/variable";
 import { device } from "../utils/device";
 import { useRouter } from 'next/router';
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Mousewheel, Keyboard } from "swiper";
-// import "swiper/css";
-// import "swiper/css/navigation";
 
 // components
 import NavigationBar from '../comps/NavigationBar';
@@ -94,90 +90,6 @@ export default function Home() {
         </SocialContainerAbout>
       </ProfileContainerSmall>
 
-      {/* <SkillsContainer>
-        <Swiper cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          keyboard={true}
-          slidesPerView={8}
-          spaceBetween={5}
-          modules={[Navigation, Mousewheel, Keyboard]}
-          className="mySwiper">
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/html5icon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/cssicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/sassicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/reacticon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/jsicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/styledcompicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nexticon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/vercelicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nodeicon.svg"} />
-          </SwiperSlide>
-        </Swiper>
-      </SkillsContainer>
-
-      <SkillsContainerSmall>
-        <Swiper cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          keyboard={true}
-          slidesPerView={3}
-          spaceBetween={-60}
-          modules={[Navigation, Mousewheel, Keyboard]}
-          className="mySwiper">
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/html5icon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/cssicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/sassicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/reacticon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/jsicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/styledcompicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nexticon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/vercelicon.svg"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillIcon bg={themes[theme].skillIconBg} icon={"/images/home/skills/nodeicon.svg"} />
-          </SwiperSlide>
-        </Swiper>
-      </SkillsContainerSmall> */}
-
       <Tag id="project" />
 
       {/* Projects Page Overview */}
@@ -204,9 +116,9 @@ export default function Home() {
             <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/mindful"} margin="16px" projectImage={"/images/home/projects/mindfulprev.png"} projectIcon={"/images/home/projects/mindfullogoprev.svg"} />
             <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/calorielab"} projectImage={"/images/home/projects/calorielabprev.png"} projectIcon={"/images/home/projects/calorielablogoprev.png"} />
             <ProjectCard width="168.64px" height="168.64px" routeTo={"/projects/westpoint"} projectImage={"/images/home/projects/westpointprev.png"} projectIcon={"/images/home/projects/westpointlogoprev.svg"} />
-            <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design/"} projectImage={"/images/home/projects/promsprev.png"} projectIcon={"/images/home/skills/illusicon.svg"} />
-            <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/home/projects/dysonprev.png"} projectIcon={"/images/home/skills/illusicon.svg"} />
-            <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" routeTo={"/projects/design"} projectImage={"/images/home/projects/thenaprev.png"} projectIcon={"/images/home/skills/photoshopicon.svg"} />
+            <ProjectCard iconwidth="50px" width="168.64px" height="168.64px" projectImage={"/images/home/projects/promsprev.png"} projectIcon={"/images/home/skills/illusicon.svg"} />
+            <ProjectCard iconwidth="50px" width="168.64px" height="168.64px"  projectImage={"/images/home/projects/dysonprev.png"} projectIcon={"/images/home/skills/illusicon.svg"} />
+            <ProjectCard iconwidth="50px" width="168.64px" height="168.64px"  projectImage={"/images/home/projects/thenaprev.png"} projectIcon={"/images/home/skills/photoshopicon.svg"} />
           </ProjectDevContainer>
         </ProjectCatContainer>
       </ProjectContainer>
